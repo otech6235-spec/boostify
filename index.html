@@ -2571,8 +2571,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
   <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB6GJFEifbwsc16X5usixc7rcmM59bftf4",
@@ -2599,5 +2599,26 @@ window.saveOrder = async function(name, phone, pkg, amount) {
   alert("Order Saved ✅");
 };
   </script>
+  <div style="padding:20px; text-align:center;">
+  <input type="text" id="name" placeholder="Enter your name" style="padding:10px; width:80%;"><br><br>
+
+  <input type="text" id="phone" placeholder="Enter your phone" style="padding:10px; width:80%;"><br><br>
+
+  <button onclick="placeOrder()" style="padding:12px 20px; background:#ff6b00; color:#fff; border:none; border-radius:5px;">
+    Order Now
+  </button>
+</div>
+
+<script>
+function placeOrder() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+
+  const pkg = "1K Followers";
+  const amount = "100";
+
+  saveOrder(name, phone, pkg, amount);
+}
+</script>
 </body>
 </html>
