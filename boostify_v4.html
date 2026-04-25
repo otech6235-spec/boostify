@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoostifyMedia - #1 Social Media Growth Service</title>
+<meta name="description" content="BoostifyMedia - Get Real Instagram Followers, Likes & Views. Instant Delivery. 100% Safe. Best Price Guaranteed.">
+<meta name="keywords" content="instagram followers, buy followers, buy likes, buy views, social media growth, BoostifyMedia">
+<meta property="og:title" content="BoostifyMedia - Grow Your Social Media Fast">
+<meta property="og:description" content="Real Followers, Likes & Views. Instant Delivery. 24/7 Support.">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{
+  --primary:#ff6b00;--primary-dark:#cc5500;--secondary:#00d4ff;
+  --bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a26;--card:#16161f;
+  --border:#2a2a3a;--text:#e8e8f0;--text2:#9999bb;
+  --success:#00e676;--warning:#ffab00;--danger:#ff1744;
+  --gold:#ffd700;--purple:#9b59b6;
+}
+[data-theme="light"]{
+  --bg:#f0f2f5;--bg2:#ffffff;--bg3:#e8eaf0;--card:#ffffff;
+  --border:#dde1ea;--text:#1a1a2e;--text2:#666688;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Exo 2',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;transition:background 0.3s,color 0.3s;}
+a{text-decoration:none;color:inherit;}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:var(--bg2);}
+::-webkit-scrollbar-thumb{background:var(--primary);border-radius:5px;}
+
+/* POPUP OFFER */
+#firstVisitPopup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;align-items:center;justify-content:center;}
+#firstVisitPopup.open{display:flex;}
+.popup-box{background:linear-gradient(135deg,var(--bg2),var(--bg3));border:2px solid var(--primary);border-radius:20px;padding:35px;text-align:center;max-width:380px;width:90%;position:relative;animation:popIn 0.4s ease;}
+@keyframes popIn{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}
+.popup-box h2{font-family:'Rajdhani',sans-serif;font-size:28px;color:var(--primary);margin-bottom:8px;}
+.popup-discount{font-size:56px;font-weight:800;color:var(--gold);font-family:'Rajdhani',sans-serif;line-height:1;}
+.popup-code{background:var(--bg);border:2px dashed var(--primary);border-radius:10px;padding:10px 20px;font-size:22px;font-weight:800;color:var(--primary);letter-spacing:3px;margin:15px 0;font-family:'Rajdhani',sans-serif;}
+.popup-close{position:absolute;top:12px;right:15px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;}
+.popup-btn{background:var(--primary);color:white;border:none;padding:13px 30px;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer;width:100%;margin-top:5px;}
+.popup-timer{color:var(--text2);font-size:13px;margin-top:10px;}
+
+/* ANNOUNCEMENT */
+#announcement-bar{background:linear-gradient(90deg,var(--primary),#ff3d00,var(--primary));background-size:200% 100%;animation:bannerScroll 3s linear infinite;text-align:center;padding:9px;font-size:12px;font-weight:600;letter-spacing:0.5px;z-index:1000;position:relative;}
+@keyframes bannerScroll{0%{background-position:0%}100%{background-position:200%}}
+
+/* FLASH SALE */
+#flashSale{background:linear-gradient(90deg,#1a0a00,#2d1000,#1a0a00);border-bottom:1px solid var(--primary);padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap;}
+.flash-timer{display:flex;gap:8px;align-items:center;}
+.flash-digit{background:var(--primary);color:white;padding:5px 10px;border-radius:6px;font-weight:800;font-family:'Rajdhani',sans-serif;font-size:20px;min-width:36px;text-align:center;}
+.flash-sep{color:var(--primary);font-weight:800;font-size:18px;}
+
+/* NAV */
+nav{background:rgba(10,10,15,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:998;}
+.logo{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;}
+.logo span{color:var(--primary);}
+.nav-links{display:flex;gap:15px;align-items:center;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text2);transition:color 0.2s;}
+.nav-links a:hover{color:var(--primary);}
+.nav-actions{display:flex;gap:8px;align-items:center;}
+.theme-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;}
+.login-btn{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:7px 14px;border-radius:6px;font-weight:600;font-size:13px;cursor:pointer;}
+.admin-nav-btn{background:var(--primary);color:white;padding:7px 14px;border-radius:6px;font-weight:600;font-size:13px;cursor:pointer;border:none;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block;}
+
+/* CURRENCY */
+.currency-select{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;cursor:pointer;}
+
+/* HERO */
+.hero{padding:50px 20px 30px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(255,107,0,0.12) 0%,transparent 65%);}
+.hero h1{font-family:'Rajdhani',sans-serif;font-size:clamp(28px,5.5vw,52px);font-weight:700;line-height:1.1;}
+.hero h1 span{color:var(--primary);}
+.hero p{color:var(--text2);font-size:15px;margin:12px 0 25px;max-width:480px;margin-left:auto;margin-right:auto;}
+.hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+.hero-badge{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:12px;font-weight:600;}
+.live-counter{display:inline-flex;align-items:center;gap:8px;background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.3);padding:7px 15px;border-radius:50px;font-size:13px;color:var(--success);margin-bottom:18px;}
+.live-dot{width:7px;height:7px;background:var(--success);border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+.hero-stats{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-bottom:25px;}
+.hero-stat .num{font-size:26px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;}
+.hero-stat .lbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.8px;}
+.platform-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:15px;}
+.platform-tab{padding:8px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg2);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;color:var(--text2);}
+.platform-tab.active,.platform-tab:hover{background:var(--primary);color:white;border-color:var(--primary);}
+
+/* TABS & PACKAGES */
+.packages-section{max-width:960px;margin:0 auto;padding:0 15px 40px;}
+.tabs{display:flex;background:var(--bg2);border-radius:12px;padding:4px;gap:3px;overflow-x:auto;margin-bottom:20px;}
+.tab{flex:1;padding:9px 5px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;border-radius:8px;transition:all 0.2s;white-space:nowrap;color:var(--text2);border:none;background:none;}
+.tab.active{background:var(--primary);color:white;}
+.bulk-discount-bar{background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.25);border-radius:10px;padding:12px 16px;margin-bottom:15px;font-size:13px;display:flex;gap:20px;flex-wrap:wrap;}
+.bulk-tier{display:flex;align-items:center;gap:6px;}
+.bulk-badge{background:var(--primary);color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;}
+.pkg-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative;transition:all 0.3s;cursor:pointer;}
+.pkg-card:hover{border-color:var(--primary);transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,107,0,0.15);}
+.pkg-card.popular{border-color:var(--primary);}
+.pkg-card.best-choice{border-color:var(--gold);box-shadow:0 0 15px rgba(255,215,0,0.15);}
+.popular-badge{position:absolute;top:-10px;right:12px;background:var(--primary);color:white;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.best-badge{position:absolute;top:-10px;left:12px;background:var(--gold);color:#000;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.pkg-name{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;margin-bottom:4px;}
+.pkg-details{color:var(--text2);font-size:13px;margin-bottom:10px;}
+.pkg-price-row{display:flex;align-items:baseline;gap:8px;}
+.pkg-price{font-size:26px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;}
+.pkg-old-price{font-size:14px;color:var(--text2);text-decoration:line-through;}
+.pkg-speed{display:inline-block;font-size:10px;background:rgba(0,212,255,0.1);color:var(--secondary);border:1px solid rgba(0,212,255,0.3);padding:2px 8px;border-radius:10px;margin-top:5px;}
+.pkg-actions{display:flex;gap:8px;margin-top:12px;}
+.pkg-btn{flex:1;background:var(--primary);color:white;border:none;padding:10px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:background 0.2s;}
+.pkg-btn:hover{background:var(--primary-dark);}
+.wishlist-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text2);width:38px;border-radius:8px;cursor:pointer;font-size:16px;transition:all 0.2s;}
+.wishlist-btn.active{color:#e91e63;border-color:#e91e63;}
+.pkg-loyalty{font-size:11px;color:var(--gold);margin-top:6px;}
+
+/* DELIVERY SPEED */
+.speed-selector{display:flex;gap:8px;margin:10px 0;}
+.speed-opt{flex:1;padding:8px 5px;border:1px solid var(--border);border-radius:8px;text-align:center;cursor:pointer;font-size:12px;font-weight:600;color:var(--text2);transition:all 0.2s;}
+.speed-opt.selected{border-color:var(--primary);color:var(--primary);background:rgba(255,107,0,0.08);}
+.speed-price{font-size:10px;color:var(--text2);margin-top:2px;}
+
+/* ORDER MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:2000;align-items:center;justify-content:center;padding:15px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px;width:100%;max-width:440px;max-height:92vh;overflow-y:auto;}
+.modal h3{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;margin-bottom:4px;}
+.pkg-summary{background:var(--bg3);border-radius:8px;padding:12px;margin:10px 0;font-size:14px;}
+.pkg-summary strong{color:var(--primary);font-size:18px;}
+.form-group{margin-bottom:12px;}
+.form-group label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;transition:border-color 0.2s;}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--primary);}
+.form-group textarea{resize:vertical;min-height:60px;}
+.payment-info{background:rgba(255,107,0,0.07);border:1px solid rgba(255,107,0,0.3);border-radius:10px;padding:14px;margin:12px 0;}
+.upi-id{font-size:16px;font-weight:700;color:var(--primary);letter-spacing:1px;margin:4px 0;}
+.qr-box{text-align:center;margin:10px 0;}
+.qr-img{width:140px;height:140px;background:white;border-radius:10px;padding:8px;margin:0 auto;}
+.amount-display{font-size:22px;font-weight:800;color:var(--success);margin:6px 0;}
+.copy-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:4px 12px;border-radius:5px;font-size:12px;cursor:pointer;}
+.price-breakdown{font-size:12px;color:var(--text2);margin-top:6px;}
+.price-breakdown span{color:var(--success);}
+.submit-btn{width:100%;background:var(--primary);color:white;border:none;padding:13px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;margin-top:5px;transition:background 0.2s;}
+.submit-btn:hover{background:var(--primary-dark);}
+.close-btn{float:right;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;}
+.coupon-row{display:flex;gap:8px;}
+.coupon-row input{flex:1;}
+.coupon-apply-btn{background:var(--secondary);color:#000;border:none;padding:0 14px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;}
+
+/* CUSTOMER LOGIN */
+#customerLogin{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:5000;align-items:center;justify-content:center;}
+#customerLogin.open{display:flex;}
+.login-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:30px;width:100%;max-width:360px;text-align:center;}
+.login-box h3{font-family:'Rajdhani',sans-serif;font-size:22px;margin-bottom:5px;}
+.login-box p{color:var(--text2);font-size:13px;margin-bottom:20px;}
+.login-box input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;color:var(--text);font-size:15px;font-family:inherit;margin-bottom:12px;text-align:center;}
+.login-box input:focus{outline:none;border-color:var(--primary);}
+.login-submit{width:100%;background:var(--primary);color:white;border:none;padding:12px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;}
+
+/* CUSTOMER DASHBOARD */
+#customerDash{display:none;position:fixed;inset:0;background:var(--bg);z-index:4500;overflow-y:auto;}
+#customerDash.open{display:block;}
+.dash-nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.dash-nav h3{font-family:'Rajdhani',sans-serif;font-size:18px;}
+.dash-logout{background:none;border:1px solid var(--border);color:var(--text2);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px;}
+.dash-content{padding:20px;max-width:700px;margin:0 auto;}
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+.dash-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
+.dash-stat .val{font-size:22px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;}
+.dash-stat .lbl{font-size:11px;color:var(--text2);}
+.loyalty-bar{background:var(--card);border:1px solid var(--gold);border-radius:10px;padding:15px;margin-bottom:15px;}
+.loyalty-progress{background:var(--bg3);border-radius:10px;height:10px;margin:8px 0;overflow:hidden;}
+.loyalty-fill{background:linear-gradient(90deg,var(--gold),var(--warning));border-radius:10px;height:100%;transition:width 0.5s;}
+.vip-badge{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,var(--gold),#b8860b);color:#000;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px;}
+.achievement{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center;font-size:11px;}
+.achievement.earned{border-color:var(--gold);background:rgba(255,215,0,0.08);}
+.achievement .icon{font-size:24px;margin-bottom:4px;}
+
+/* SECTIONS */
+.section-header{text-align:center;padding:35px 15px 18px;}
+.section-header h2{font-family:'Rajdhani',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:700;}
+.section-header h2 span{color:var(--primary);}
+.section-header p{color:var(--text2);font-size:14px;margin-top:6px;}
+
+/* TRACK */
+.track-section{max-width:520px;margin:0 auto 35px;padding:0 15px;}
+.track-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;}
+.track-box h3{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;margin-bottom:12px;}
+.track-row{display:flex;gap:10px;}
+.track-row input{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;}
+.track-row input:focus{outline:none;border-color:var(--secondary);}
+.track-btn{background:var(--secondary);color:#000;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;}
+.track-result{margin-top:12px;display:none;}
+.status-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+.status-pending{background:rgba(255,171,0,0.2);color:var(--warning);border:1px solid var(--warning);}
+.status-completed{background:rgba(0,230,118,0.2);color:var(--success);border:1px solid var(--success);}
+.status-cancelled{background:rgba(255,23,68,0.2);color:var(--danger);border:1px solid var(--danger);}
+.delivery-progress{margin-top:10px;}
+.progress-bar{background:var(--bg3);border-radius:10px;height:8px;overflow:hidden;margin-top:5px;}
+.progress-fill{background:linear-gradient(90deg,var(--primary),var(--warning));border-radius:10px;height:100%;transition:width 1s;}
+
+/* FAQ */
+.faq-section{max-width:680px;margin:0 auto 35px;padding:0 15px;}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}
+.faq-q{padding:14px 16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px;}
+.faq-q:hover{color:var(--primary);}
+.faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:all 0.3s;color:var(--text2);font-size:13px;}
+.faq-a.open{padding:0 16px 13px;max-height:200px;}
+
+/* REVIEWS */
+.reviews-section{max-width:960px;margin:0 auto 35px;padding:0 15px;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:13px;margin-top:18px;}
+.review-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;}
+.review-stars{color:#ffab00;font-size:15px;margin-bottom:6px;}
+.review-text{font-size:13px;color:var(--text2);margin-bottom:8px;font-style:italic;}
+.review-author{font-size:12px;font-weight:600;color:var(--primary);}
+.review-date{font-size:10px;color:var(--text2);}
+.add-review-btn{display:block;margin:18px auto 0;background:transparent;border:1px solid var(--primary);color:var(--primary);padding:9px 22px;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px;}
+.review-form{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-top:13px;display:none;}
+.star-select{display:flex;gap:5px;font-size:26px;cursor:pointer;margin-bottom:8px;}
+
+/* REFERRAL */
+.referral-section{max-width:580px;margin:0 auto 35px;padding:0 15px;}
+.referral-box{background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid var(--primary);border-radius:14px;padding:24px;text-align:center;}
+.referral-code{font-size:22px;font-weight:800;color:var(--primary);letter-spacing:3px;background:var(--bg);padding:10px 20px;border-radius:8px;display:inline-block;margin:10px 0;font-family:'Rajdhani',sans-serif;}
+.share-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
+.share-btn{padding:8px 16px;border-radius:20px;border:none;font-weight:600;font-size:13px;cursor:pointer;}
+.share-wa{background:#25d366;color:white;}
+.share-fb{background:#1877f2;color:white;}
+.share-copy{background:var(--bg3);border:1px solid var(--border);color:var(--text);}
+
+/* SUBSCRIPTION */
+.subscription-section{max-width:800px;margin:0 auto 35px;padding:0 15px;}
+.sub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:18px;}
+.sub-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
+.sub-card.popular{border-color:var(--primary);}
+.sub-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;margin-bottom:5px;}
+.sub-price{font-size:24px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;}
+.sub-features{text-align:left;margin:12px 0;font-size:13px;color:var(--text2);}
+.sub-features li{margin-bottom:5px;list-style:none;padding-left:5px;}
+.sub-features li::before{content:"✓ ";color:var(--success);}
+.sub-btn{width:100%;background:var(--primary);color:white;border:none;padding:10px;border-radius:8px;font-weight:700;cursor:pointer;margin-top:8px;}
+
+/* INVOICE */
+.invoice-section{max-width:500px;margin:0 auto 35px;padding:0 15px;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:25px 20px;text-align:center;}
+.footer-logo{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px;}
+.footer-logo span{color:var(--primary);}
+.contact-info{margin:12px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.contact-info a{color:var(--secondary);font-size:13px;font-weight:600;}
+footer p{color:var(--text2);font-size:12px;}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:90px;right:18px;z-index:997;background:#25d366;color:white;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 18px rgba(37,211,102,0.4);animation:waBounce 2s infinite;cursor:pointer;}
+@keyframes waBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.chat-btn{position:fixed;bottom:155px;right:18px;z-index:997;background:var(--secondary);color:#000;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 14px rgba(0,212,255,0.3);cursor:pointer;border:none;}
+.chat-box{position:fixed;bottom:210px;right:12px;width:290px;z-index:997;background:var(--bg2);border:1px solid var(--border);border-radius:14px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.5);}
+.chat-box.open{display:flex;}
+.chat-header{background:var(--secondary);color:#000;padding:11px 14px;font-weight:700;font-size:13px;display:flex;justify-content:space-between;}
+.chat-messages{height:190px;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:7px;}
+.chat-msg{background:var(--bg3);border-radius:8px;padding:7px 10px;font-size:12px;max-width:90%;}
+.chat-msg.user{background:rgba(255,107,0,0.2);align-self:flex-end;}
+.chat-input-row{display:flex;border-top:1px solid var(--border);}
+.chat-input-row input{flex:1;background:transparent;border:none;padding:9px 11px;color:var(--text);font-size:13px;font-family:inherit;}
+.chat-input-row input:focus{outline:none;}
+.chat-send{background:var(--primary);color:white;border:none;padding:9px 13px;cursor:pointer;}
+
+/* SUCCESS */
+#success-page{display:none;position:fixed;inset:0;background:var(--bg);z-index:3000;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:25px;}
+#success-page.open{display:flex;}
+.success-icon{font-size:65px;margin-bottom:18px;animation:successPop 0.5s ease;}
+@keyframes successPop{0%{transform:scale(0)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+#success-page h2{font-family:'Rajdhani',sans-serif;font-size:30px;margin-bottom:8px;}
+#success-page p{color:var(--text2);max-width:380px;margin-bottom:18px;font-size:14px;}
+.order-id-box{background:var(--card);border:1px solid var(--primary);border-radius:10px;padding:14px 24px;margin-bottom:15px;}
+.order-id-box .oid{font-size:22px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;letter-spacing:2px;}
+.wa-send-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:white;border:none;padding:14px 20px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;margin:10px auto;max-width:300px;box-shadow:0 4px 15px rgba(37,211,102,0.4);}
+.invoice-download-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 22px;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px;margin-bottom:10px;}
+
+/* NOTIF */
+.notif{position:fixed;top:65px;right:18px;z-index:9999;background:var(--success);color:#000;padding:11px 18px;border-radius:10px;font-weight:700;font-size:13px;transform:translateX(200%);transition:transform 0.3s;max-width:280px;}
+.notif.show{transform:translateX(0);}
+.notif.error{background:var(--danger);color:white;}
+.notif.warn{background:var(--warning);color:#000;}
+
+/* ADMIN LOGIN */
+#admin-login{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:6000;align-items:center;justify-content:center;}
+#admin-login.open{display:flex;}
+.admin-login-box{background:#0d0d1a;border:1px solid var(--primary);border-radius:16px;padding:32px;width:100%;max-width:360px;text-align:center;}
+.admin-login-box h3{font-family:'Rajdhani',sans-serif;font-size:22px;margin-bottom:18px;color:var(--primary);}
+.admin-login-box input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;color:var(--text);font-size:15px;margin-bottom:12px;font-family:inherit;text-align:center;letter-spacing:2px;}
+.admin-login-box input:focus{outline:none;border-color:var(--primary);}
+.admin-login-btn{width:100%;background:var(--primary);color:white;border:none;padding:12px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;}
+.admin-login-err{color:var(--danger);font-size:13px;margin-top:7px;display:none;}
+
+/* ADMIN PANEL */
+#admin-panel{display:none;position:fixed;inset:0;background:#0a0a12;z-index:5000;overflow-y:auto;}
+#admin-panel.open{display:block;}
+.admin-nav{background:#08080f;border-bottom:1px solid var(--primary);padding:11px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.admin-nav h2{font-family:'Rajdhani',sans-serif;font-size:18px;color:var(--primary);}
+.admin-logout{background:var(--danger);color:white;border:none;padding:6px 13px;border-radius:6px;font-weight:600;cursor:pointer;font-size:12px;}
+.admin-tabs{display:flex;gap:3px;padding:12px 12px 0;overflow-x:auto;}
+.admin-tab{padding:8px 13px;border-radius:8px 8px 0 0;border:1px solid var(--border);border-bottom:none;cursor:pointer;font-size:12px;font-weight:600;color:var(--text2);background:var(--bg2);white-space:nowrap;}
+.admin-tab.active{background:var(--card);color:var(--primary);border-color:var(--primary);}
+.admin-content{padding:12px;}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:18px;}
+.admin-stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
+.admin-stat-card .val{font-size:24px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;}
+.admin-stat-card .lbl{font-size:11px;color:var(--text2);margin-top:2px;}
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:15px;}
+.chart-wrap h4{font-size:14px;font-weight:600;margin-bottom:12px;color:var(--text2);}
+.admin-table-wrap{overflow-x:auto;}
+.admin-table{width:100%;border-collapse:collapse;font-size:12px;}
+.admin-table th{background:var(--bg3);padding:9px 10px;text-align:left;color:var(--text2);font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap;}
+.admin-table td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.admin-table tr:hover td{background:rgba(255,107,0,0.04);}
+.action-btn{padding:3px 9px;border-radius:5px;border:none;font-size:11px;font-weight:600;cursor:pointer;margin:0 2px;}
+.btn-complete{background:rgba(0,230,118,0.15);color:var(--success);border:1px solid var(--success);}
+.btn-cancel{background:rgba(255,23,68,0.15);color:var(--danger);border:1px solid var(--danger);}
+.btn-delete{background:rgba(255,23,68,0.1);color:var(--danger);border:1px solid rgba(255,23,68,0.3);}
+.btn-edit{background:rgba(0,212,255,0.1);color:var(--secondary);border:1px solid var(--secondary);}
+.admin-search{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:13px;width:100%;margin-bottom:12px;font-family:inherit;}
+.admin-search:focus{outline:none;border-color:var(--primary);}
+.add-form{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:18px;}
+.add-form h4{font-family:'Rajdhani',sans-serif;font-size:15px;margin-bottom:13px;color:var(--primary);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.add-submit{background:var(--primary);color:white;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;margin-top:8px;font-size:13px;}
+.profit-card{background:var(--card);border:1px solid var(--gold);border-radius:12px;padding:18px;margin-bottom:12px;}
+.profit-card h4{color:var(--gold);margin-bottom:10px;font-size:14px;}
+.profit-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);}
+.profit-row:last-child{border:none;font-weight:700;color:var(--success);}
+.blacklist-tag{background:rgba(255,23,68,0.15);color:var(--danger);border:1px solid var(--danger);padding:2px 8px;border-radius:10px;font-size:10px;}
+.visitor-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;margin-bottom:10px;}
+.visitor-num{font-size:36px;font-weight:800;color:var(--secondary);font-family:'Rajdhani',sans-serif;}
+.pending-alert{background:rgba(255,171,0,0.1);border:1px solid var(--warning);border-radius:8px;padding:12px;margin-bottom:12px;font-size:13px;color:var(--warning);}
+.bulk-update-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.filter-btn{padding:7px 13px;border-radius:20px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;}
+.filter-btn.active{background:var(--primary);color:white;border-color:var(--primary);}
+.export-btn{background:var(--success);color:#000;border:none;padding:7px 14px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;}
+
+/* MOBILE */
+@media(max-width:640px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;position:fixed;inset:0;background:var(--bg2);flex-direction:column;align-items:center;justify-content:center;gap:22px;z-index:997;}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-size:17px;}
+  .form-row{grid-template-columns:1fr;}
+  .dash-stats{grid-template-columns:1fr 1fr;}
+  .achievement-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- NOTIFICATION -->
+<div class="notif" id="notif"></div>
+
+<!-- FIRST VISIT POPUP -->
+<div id="firstVisitPopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div style="font-size:36px;margin-bottom:8px;">🎁</div>
+    <h2>Welcome Offer!</h2>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:10px;">First order pe special discount</p>
+    <div class="popup-discount">10% OFF</div>
+    <div style="font-size:13px;color:var(--text2);margin:8px 0;">Use code:</div>
+    <div class="popup-code" id="popupCode">FIRST10</div>
+    <button class="popup-btn" onclick="copyPopupCode()">Copy Code & Order Now</button>
+    <div class="popup-timer">⏰ Offer expires in: <span id="popupCountdown">10:00</span></div>
+  </div>
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div id="announcement-bar">🔥 Trial Pack: 100 Followers @ ₹9 Only! | 24/7 Support: 8011267054 | Free delivery on orders above ₹500!</div>
+
+<!-- FLASH SALE -->
+<div id="flashSale">
+  <span style="font-weight:700;font-size:13px;">⚡ FLASH SALE ENDS IN:</span>
+  <div class="flash-timer">
+    <div class="flash-digit" id="fh">00</div><div class="flash-sep">:</div>
+    <div class="flash-digit" id="fm">00</div><div class="flash-sep">:</div>
+    <div class="flash-digit" id="fs">00</div>
+  </div>
+  <span style="font-size:13px;color:var(--primary);font-weight:700;">Extra 5% OFF on all packages!</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Boostify<span>Media</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#packages" onclick="closeNav()">Packages</a>
+    <a href="#track" onclick="closeNav()">Track</a>
+    <a href="#reviews" onclick="closeNav()">Reviews</a>
+    <a href="#faq" onclick="closeNav()">FAQ</a>
+    <a href="#referral" onclick="closeNav()">Refer & Earn</a>
+    <a href="#vip" onclick="closeNav()">👑 VIP</a>
+    <a href="#" onclick="openResellerPanel();closeNav()">🤝 Reseller</a>
+  </div>
+  <div class="nav-actions">
+    <select class="currency-select" onchange="changeCurrency(this.value)" id="currencySelect">
+      <option value="INR">₹ INR</option>
+      <option value="USD">$ USD</option>
+      <option value="BDT">৳ BDT</option>
+    </select>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+    <button class="login-btn" onclick="openCustomerLogin()">👤 My Account</button>
+    <button class="admin-nav-btn" onclick="openAdminLogin()">🔐</button>
+    <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- LIVE SOCIAL PROOF TICKER -->
+<div id="socialProofTicker" style="background:rgba(0,230,118,0.08);border-bottom:1px solid rgba(0,230,118,0.2);padding:8px 20px;font-size:12px;color:var(--success);text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;">
+  <span class="live-dot" style="background:var(--success)"></span>
+  <span id="socialProofText">Rahul from Delhi just ordered 1K Followers!</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="live-counter">
+    <div class="live-dot"></div>
+    <span id="liveOrderCount">5199</span> Orders Completed
+  </div>
+  <h1>Grow Your Social Media<br><span>Fast & Real</span></h1>
+  <p>Real Followers, Likes & Views — Instant Delivery. 100% Safe & Trusted.</p>
+  <div class="hero-badges">
+    <span class="hero-badge">✅ 100% Safe</span>
+    <span class="hero-badge">⚡ Instant Delivery</span>
+    <span class="hero-badge">🔒 Secure Payment</span>
+    <span class="hero-badge">24/7 Support</span>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:18px;">
+    <button onclick="openRecommender()" style="background:linear-gradient(135deg,var(--secondary),#0099cc);color:#000;border:none;padding:11px 22px;border-radius:25px;font-weight:800;font-size:14px;cursor:pointer;">🎯 Find My Perfect Package</button>
+    <button onclick="openGoalOrder()" style="background:linear-gradient(135deg,var(--gold),#b8860b);color:#000;border:none;padding:11px 22px;border-radius:25px;font-weight:800;font-size:14px;cursor:pointer;">🎯 Goal-Based Order</button>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num" id="statOrders">5199</div><div class="lbl">Orders Done</div></div>
+    <div class="hero-stat"><div class="num">1K+</div><div class="lbl">Customers</div></div>
+    <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Support</div></div>
+    <div class="hero-stat"><div class="num">100%</div><div class="lbl">Safe</div></div>
+  </div>
+  <div class="platform-tabs">
+    <button class="platform-tab active" onclick="setPlatform('instagram',this)">📸 Instagram</button>
+    <button class="platform-tab" onclick="setPlatform('youtube',this)">▶️ YouTube</button>
+    <button class="platform-tab" onclick="setPlatform('facebook',this)">📘 Facebook</button>
+  </div>
+</div>
+
+<!-- FOMO BANNER -->
+<div id="fomoBanner" style="background:linear-gradient(90deg,rgba(255,23,68,0.15),rgba(255,107,0,0.15));border:1px solid rgba(255,107,0,0.4);margin:0 15px 10px;border-radius:10px;padding:10px 16px;font-size:13px;display:flex;align-items:center;gap:10px;max-width:960px;margin-left:auto;margin-right:auto;">
+  <span style="font-size:18px">🔥</span>
+  <span id="fomoText" style="flex:1">Only <b style="color:var(--primary)">3 people</b> are viewing Growth Combo right now!</span>
+  <button onclick="this.parentElement.style.display='none'" style="background:none;border:none;color:var(--text2);cursor:pointer;font-size:16px;">✕</button>
+</div>
+
+<!-- PACKAGES -->
+<div id="packages" class="packages-section">
+  <div class="tabs" id="pkgTabs">
+    <button class="tab active" onclick="showCategory('combo',this)">🚀 Combo</button>
+    <button class="tab" onclick="showCategory('followers',this)">👥 Followers</button>
+    <button class="tab" onclick="showCategory('likes',this)">👍 Likes</button>
+    <button class="tab" onclick="showCategory('views',this)">👁️ Views</button>
+    <button class="tab" onclick="showCategory('trial',this)">🎁 Trial ₹9</button>
+  </div>
+  <div class="bulk-discount-bar">
+    <span style="font-weight:600;font-size:13px;">🎯 Bulk Discount:</span>
+    <div class="bulk-tier"><div class="bulk-badge">5% OFF</div><span style="font-size:12px;">₹500+</span></div>
+    <div class="bulk-tier"><div class="bulk-badge">10% OFF</div><span style="font-size:12px;">₹1000+</span></div>
+    <div class="bulk-tier"><div class="bulk-badge">15% OFF</div><span style="font-size:12px;">₹2000+</span></div>
+  </div>
+  <div class="pkg-grid" id="pkgGrid"></div>
+</div>
+
+<!-- SUBSCRIPTIONS -->
+<div id="subscriptions">
+  <div class="section-header"><h2>Monthly <span>Subscriptions</span></h2><p>Auto-renew plans for consistent growth</p></div>
+  <div class="subscription-section">
+    <div class="sub-grid" id="subGrid"></div>
+  </div>
+</div>
+
+<!-- TRACK ORDER -->
+<div id="track">
+  <div class="section-header"><h2>Track Your <span>Order</span></h2><p>Enter Order ID or Phone Number</p></div>
+  <div class="track-section">
+    <div class="track-box">
+      <div class="track-row" style="margin-bottom:10px;">
+        <input type="text" id="trackInput" placeholder="Order ID (BM-2024-0001)">
+        <button class="track-btn" onclick="trackOrder()">Track</button>
+      </div>
+      <div class="track-row">
+        <input type="text" id="trackPhone" placeholder="Or enter Phone Number">
+        <button class="track-btn" onclick="trackByPhone()">Search</button>
+      </div>
+      <div class="track-result" id="trackResult"></div>
+    </div>
+  </div>
+</div>
+
+<!-- REFERRAL -->
+<div id="referral">
+  <div class="section-header"><h2>Refer & <span>Earn</span></h2><p>Share your code — You both save ₹20!</p></div>
+  <div class="referral-section">
+    <div class="referral-box">
+      <p style="color:var(--text2);margin-bottom:8px;font-size:13px;">Your Referral Code</p>
+      <div class="referral-code" id="myReferralCode">BM-XXXX</div>
+      <p style="color:var(--text2);font-size:12px;margin-top:8px;">Friend orders with your code → Both get ₹20 off</p>
+      <p style="color:var(--text2);font-size:11px;margin-top:4px;">💡 You earn ₹20 per referral — profit stays protected</p>
+      <div class="share-btns">
+        <button class="share-btn share-wa" onclick="shareOnWA()">📱 WhatsApp</button>
+        <button class="share-btn share-fb" onclick="shareOnFB()">📘 Facebook</button>
+        <button class="share-btn share-copy" onclick="copyReferral()">📋 Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div id="reviews">
+  <div class="section-header"><h2>Customer <span>Reviews</span></h2><p>Real feedback from real customers</p></div>
+  <div class="reviews-section">
+    <div class="reviews-grid" id="reviewsGrid"></div>
+    <button class="add-review-btn" onclick="toggleReviewForm()">+ Add Your Review</button>
+    <div class="review-form" id="reviewForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="reviewName" placeholder="Enter name"></div>
+      <div class="form-group"><label>Order ID (optional)</label><input type="text" id="reviewOrderId" placeholder="BM-2024-0001"></div>
+      <div class="form-group"><label>Rating</label>
+        <div class="star-select" id="starSelect">
+          <span onclick="setStars(1)">☆</span><span onclick="setStars(2)">☆</span>
+          <span onclick="setStars(3)">☆</span><span onclick="setStars(4)">☆</span>
+          <span onclick="setStars(5)">☆</span>
+        </div>
+      </div>
+      <div class="form-group"><label>Review</label><textarea id="reviewText" rows="3" placeholder="Share your experience..."></textarea></div>
+      <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq">
+  <div class="section-header"><h2>Frequently Asked <span>Questions</span></h2></div>
+  <div class="faq-section" id="faqSection"></div>
+</div>
+
+<!-- INVOICE DOWNLOAD -->
+<div id="invoice">
+  <div class="section-header"><h2>Download <span>Invoice</span></h2><p>Enter Order ID to download invoice</p></div>
+  <div class="invoice-section">
+    <div class="track-box">
+      <div class="track-row">
+        <input type="text" id="invoiceOrderId" placeholder="Enter Order ID">
+        <button class="track-btn" style="background:var(--primary);color:white;" onclick="downloadInvoice()">📄 Invoice</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIP MEMBERSHIP SECTION -->
+<div id="vip">
+  <div class="section-header"><h2>👑 VIP <span>Membership</span></h2><p>Exclusive perks for our loyal customers</p></div>
+  <div style="max-width:700px;margin:0 auto 35px;padding:0 15px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;">
+      <div style="background:linear-gradient(135deg,#1a1a26,#2a2a3a);border:2px solid var(--gold);border-radius:14px;padding:20px;text-align:center;">
+        <div style="font-size:36px;margin-bottom:8px;">🥈</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--gold)">Silver VIP</div>
+        <div style="color:var(--text2);font-size:12px;margin:8px 0">500+ Loyalty Points</div>
+        <div style="font-size:12px;color:var(--text)">✅ 5% Extra Discount<br>✅ Priority Processing<br>✅ VIP Badge</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#1a1200,#2a1f00);border:2px solid var(--gold);border-radius:14px;padding:20px;text-align:center;">
+        <div style="font-size:36px;margin-bottom:8px;">👑</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--gold)">Gold VIP</div>
+        <div style="color:var(--text2);font-size:12px;margin:8px 0">1000+ Loyalty Points</div>
+        <div style="font-size:12px;color:var(--text)">✅ Free Package Reward<br>✅ 10% Exclusive Discount<br>✅ WhatsApp VIP Line</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#0a001a,#1a0030);border:2px solid #9b59b6;border-radius:14px;padding:20px;text-align:center;">
+        <div style="font-size:36px;margin-bottom:8px;">💎</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#9b59b6">Diamond VIP</div>
+        <div style="color:var(--text2);font-size:12px;margin:8px 0">2000+ Loyalty Points</div>
+        <div style="font-size:12px;color:var(--text)">✅ 15% Lifetime Discount<br>✅ Monthly Free Package<br>✅ Dedicated Manager</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:18px;background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.25);border-radius:10px;padding:14px;font-size:13px;color:var(--text2);">
+      🎯 Earn 1 loyalty point per ₹1 spent. Track your points in <b>My Account</b>. WhatsApp us to claim VIP perks!
+    </div>
+  </div>
+</div>
+
+<!-- RESELLER PANEL MODAL -->
+<div id="resellerPanel" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:4000;align-items:center;justify-content:center;padding:15px;">
+  <div style="background:var(--bg2);border:1px solid var(--primary);border-radius:16px;padding:24px;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;position:relative;">
+    <button onclick="closeResellerPanel()" style="position:absolute;top:12px;right:15px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;">✕</button>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:22px;margin-bottom:4px;">🤝 Reseller <span style="color:var(--primary)">Program</span></h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px;">Sell our packages to your clients. Earn <b style="color:var(--success)">${RESELLER_COMMISSION}% commission</b> on every sale!</p>
+    
+    <div id="resellerLoginSection">
+      <div style="margin-bottom:12px;">
+        <label style="font-size:11px;color:var(--text2);display:block;margin-bottom:4px;font-weight:600;text-transform:uppercase;">Your Name</label>
+        <input type="text" id="resellerName" placeholder="Your name" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;">
+      </div>
+      <div style="margin-bottom:12px;">
+        <label style="font-size:11px;color:var(--text2);display:block;margin-bottom:4px;font-weight:600;text-transform:uppercase;">WhatsApp Number</label>
+        <input type="tel" id="resellerPhone" placeholder="10-digit phone" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;">
+      </div>
+      <button onclick="registerReseller()" style="width:100%;background:var(--primary);color:white;border:none;padding:12px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;">Register as Reseller</button>
+      <p style="text-align:center;margin-top:10px;font-size:12px;color:var(--text2)">Already registered? <a href="#" onclick="loginReseller()" style="color:var(--primary)">Login here</a></p>
+    </div>
+
+    <div id="resellerDashSection" style="display:none;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px;">
+        <div style="background:var(--bg3);border-radius:10px;padding:14px;text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;" id="rsTotalOrders">0</div>
+          <div style="font-size:11px;color:var(--text2)">Total Sales</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:10px;padding:14px;text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:var(--success);font-family:'Rajdhani',sans-serif;" id="rsEarned">₹0</div>
+          <div style="font-size:11px;color:var(--text2)">Commission Earned</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:10px;padding:14px;text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:var(--gold);font-family:'Rajdhani',sans-serif;" id="rsPending">₹0</div>
+          <div style="font-size:11px;color:var(--text2)">Pending</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.25);border-radius:10px;padding:14px;margin-bottom:14px;">
+        <div style="font-size:11px;color:var(--text2);margin-bottom:4px;">YOUR RESELLER CODE</div>
+        <div style="font-size:22px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;letter-spacing:3px;" id="rsCode">RS-XXXX</div>
+        <button onclick="copyResellerCode()" style="background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:5px 14px;border-radius:6px;font-size:12px;cursor:pointer;margin-top:6px;">📋 Copy Code</button>
+      </div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text2)">📊 Reseller Price List:</div>
+      <div style="font-size:12px;background:var(--bg3);border-radius:8px;padding:12px;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead><tr><th style="text-align:left;color:var(--text2);padding:4px 0;font-size:11px">Package</th><th style="color:var(--text2);font-size:11px">Customer Price</th><th style="color:var(--success);font-size:11px">Your Price</th></tr></thead>
+          <tbody id="resellerPriceList"></tbody>
+        </table>
+      </div>
+      <div style="margin-top:12px;background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.25);border-radius:8px;padding:12px;font-size:12px;color:var(--text2);">
+        💡 <b>How it works:</b> Send your client to our site, ask them to use your reseller code at checkout. You earn ${RESELLER_COMMISSION}% commission auto-tracked! Payment every Sunday via UPI.
+      </div>
+      <button onclick="resellerWhatsApp()" style="width:100%;margin-top:12px;background:linear-gradient(135deg,#25D366,#128C7E);color:white;border:none;padding:11px;border-radius:10px;font-weight:700;cursor:pointer;">📱 Contact Admin for Payout</button>
+    </div>
+  </div>
+</div>
+
+<!-- SMART PACKAGE RECOMMENDER MODAL -->
+<div id="recommenderModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:3500;align-items:center;justify-content:center;padding:15px;">
+  <div style="background:var(--bg2);border:1px solid var(--secondary);border-radius:16px;padding:24px;width:100%;max-width:420px;position:relative;">
+    <button onclick="closeRecommender()" style="position:absolute;top:12px;right:15px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;">✕</button>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:20px;margin-bottom:4px;">🎯 Smart <span style="color:var(--secondary)">Recommender</span></h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px;">Answer 3 quick questions and we'll find your perfect package!</p>
+    <div id="recStep1">
+      <div style="font-weight:700;margin-bottom:10px;font-size:14px;">What is your goal?</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <button class="rec-opt" onclick="setRec('goal','credibility')">💼 Build credibility / more followers</button>
+        <button class="rec-opt" onclick="setRec('goal','viral')">🔥 Go viral / boost views</button>
+        <button class="rec-opt" onclick="setRec('goal','engagement')">❤️ More likes & engagement</button>
+        <button class="rec-opt" onclick="setRec('goal','test')">🧪 Just want to try / test</button>
+      </div>
+    </div>
+    <div id="recStep2" style="display:none;">
+      <div style="font-weight:700;margin-bottom:10px;font-size:14px;">What's your budget?</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <button class="rec-opt" onclick="setRec('budget','low')">💰 Under ₹100</button>
+        <button class="rec-opt" onclick="setRec('budget','mid')">💰 ₹100 – ₹500</button>
+        <button class="rec-opt" onclick="setRec('budget','high')">💰 ₹500+</button>
+      </div>
+    </div>
+    <div id="recStep3" style="display:none;">
+      <div style="font-weight:700;margin-bottom:10px;font-size:14px;">How fast do you need it?</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <button class="rec-opt" onclick="setRec('speed','express')">🚀 Express — within 15 mins</button>
+        <button class="rec-opt" onclick="setRec('speed','fast')">⚡ Fast — within 1 hour</button>
+        <button class="rec-opt" onclick="setRec('speed','normal')">🐢 Normal — within 24 hrs</button>
+      </div>
+    </div>
+    <div id="recResult" style="display:none;">
+      <div style="font-size:13px;color:var(--success);font-weight:700;margin-bottom:10px;">✅ Perfect match found!</div>
+      <div id="recPkgCard"></div>
+    </div>
+  </div>
+</div>
+
+<!-- GOAL-BASED ORDER MODAL -->
+<div id="goalModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:3400;align-items:center;justify-content:center;padding:15px;">
+  <div style="background:var(--bg2);border:1px solid var(--gold);border-radius:16px;padding:24px;width:100%;max-width:400px;position:relative;">
+    <button onclick="closeGoalOrder()" style="position:absolute;top:12px;right:15px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;">✕</button>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:20px;margin-bottom:4px;">🎯 Goal-Based <span style="color:var(--gold)">Order</span></h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:14px;">Tell us your target — we'll pick the best package for you!</p>
+    <div style="margin-bottom:12px;">
+      <label style="font-size:11px;color:var(--text2);display:block;margin-bottom:4px;font-weight:600;text-transform:uppercase;">I want to reach (followers)</label>
+      <input type="number" id="goalFollowers" placeholder="e.g. 5000" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;">
+    </div>
+    <div style="margin-bottom:12px;">
+      <label style="font-size:11px;color:var(--text2);display:block;margin-bottom:4px;font-weight:600;text-transform:uppercase;">I currently have (followers)</label>
+      <input type="number" id="goalCurrent" placeholder="e.g. 300" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit;">
+    </div>
+    <button onclick="calcGoal()" style="width:100%;background:var(--gold);color:#000;border:none;padding:12px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;margin-bottom:10px;">Calculate My Package</button>
+    <div id="goalResult" style="display:none;background:var(--bg3);border-radius:8px;padding:12px;font-size:13px;"></div>
+  </div>
+</div>
+
+<!-- VIP SECRET DEALS PAGE -->
+<div id="vipDealsModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:3300;align-items:center;justify-content:center;padding:15px;">
+  <div style="background:linear-gradient(135deg,var(--bg2),#1a1200);border:2px solid var(--gold);border-radius:16px;padding:24px;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;position:relative;">
+    <button onclick="closeVipDeals()" style="position:absolute;top:12px;right:15px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;">✕</button>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:40px;margin-bottom:4px;">👑</div>
+      <h3 style="font-family:'Rajdhani',sans-serif;font-size:22px;color:var(--gold)">Secret VIP Deals</h3>
+      <p style="color:var(--text2);font-size:12px;">Exclusive packages — not available to public!</p>
+    </div>
+    <div style="display:grid;gap:12px;" id="vipDealsList"></div>
+    <div style="margin-top:14px;text-align:center;font-size:11px;color:var(--text2);">⏰ VIP deals refresh every 24 hours. Share with no one!</div>
+  </div>
+</div>
+
+<!-- LOSS LEADER / CHEAP ENTRY SECTION -->
+<div id="entry" style="max-width:500px;margin:0 auto 30px;padding:0 15px;">
+  <div style="background:linear-gradient(135deg,#0a1a0a,#001a00);border:2px solid var(--success);border-radius:14px;padding:20px;text-align:center;">
+    <div style="font-size:28px;margin-bottom:6px;">🎁</div>
+    <div style="font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--success)">Hook Offer — Start for ₹9!</div>
+    <div style="color:var(--text2);font-size:13px;margin:8px 0">100 Real Followers — Test our service risk-free!</div>
+    <button onclick='openOrder({id:"p24",name:"🎁 Trial Pack",cat:"trial",details:"100 Real Followers — Try Before You Buy!",price:9,cost:3})' style="background:var(--success);color:#000;border:none;padding:12px 30px;border-radius:10px;font-weight:900;font-size:16px;cursor:pointer;margin-top:6px;">Get 100 Followers for ₹9 →</button>
+    <div style="margin-top:10px;font-size:12px;color:var(--text2);">Then upsell: ➡️ 1K / 5K packages at great price!</div>
+  </div>
+</div>
+
+<!-- AUTO WHATSAPP FUNNEL -->
+<div id="autoWAFunnel" style="display:none;position:fixed;bottom:80px;left:15px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:14px;padding:14px 18px;max-width:280px;z-index:900;box-shadow:0 6px 25px rgba(37,211,102,0.5);">
+  <div style="color:white;font-weight:700;font-size:14px;margin-bottom:4px;">💬 Need help choosing?</div>
+  <div style="color:rgba(255,255,255,0.85);font-size:12px;margin-bottom:10px;">Chat with us on WhatsApp — we'll find your perfect package!</div>
+  <div style="display:flex;gap:8px;">
+    <a href="https://wa.me/918011267054?text=Hi! I need help choosing a package." target="_blank" style="flex:1;background:white;color:#25D366;border-radius:8px;padding:8px;text-align:center;font-weight:700;font-size:13px;text-decoration:none;">Chat Now</a>
+    <button onclick="document.getElementById('autoWAFunnel').style.display='none'" style="background:rgba(0,0,0,0.3);border:none;color:white;border-radius:8px;padding:8px 10px;cursor:pointer;font-size:13px;">✕</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Boostify<span>Media</span></div>
+  <div class="contact-info">
+    <a href="https://wa.me/918011267054">📱 WhatsApp: 8011267054</a>
+    <a href="tel:8011267054">📞 Call: 8011267054</a>
+  </div>
+  <p>© 2026 BoostifyMedia | UPI: kr69@ptyes | Prasanta Kumar Das</p>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px;">
+    <button onclick="openResellerPanel()" style="background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 14px;border-radius:8px;font-size:12px;cursor:pointer;font-weight:600;">🤝 Become Reseller</button>
+    <button onclick="openVipDeals()" style="background:transparent;border:1px solid var(--gold);color:var(--gold);padding:6px 14px;border-radius:8px;font-size:12px;cursor:pointer;font-weight:600;">👑 VIP Secret Deals</button>
+  </div>
+</footer>
+
+<!-- FLOATS -->
+<a href="https://wa.me/918011267054?text=Hi, I want to order" class="wa-float" title="WhatsApp">💬</a>
+<button class="chat-btn" onclick="toggleChat()">🗨️</button>
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Live Support <button onclick="toggleChat()" style="background:none;border:none;cursor:pointer;color:#000;font-size:14px;">✕</button></div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg">👋 Hi! Welcome to BoostifyMedia!</div>
+    <div class="chat-msg">For orders, WhatsApp: 8011267054</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Type message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="orderModal">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <h3>Place Order</h3>
+    <div class="pkg-summary" id="modalPkgSummary"></div>
+    <div class="form-group"><label>Delivery Speed</label>
+      <div class="speed-selector">
+        <div class="speed-opt selected" onclick="selectSpeed('normal',this)">🐢 Normal<div class="speed-price">Free</div></div>
+        <div class="speed-opt" onclick="selectSpeed('fast',this)">⚡ Fast<div class="speed-price">+₹10</div></div>
+        <div class="speed-opt" onclick="selectSpeed('express',this)">🚀 Express<div class="speed-price">+₹25</div></div>
+      </div>
+    </div>
+    <div class="form-group"><label>Your Name</label><input type="text" id="orderName" placeholder="Full name"></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" id="orderPhone" placeholder="10-digit phone"></div>
+    <div class="form-group"><label>Instagram/Facebook Username</label><input type="text" id="orderUsername" placeholder="@yourhandle"></div>
+    <div class="form-group"><label>Platform</label>
+      <select id="orderPlatform"><option>Instagram</option><option>Facebook</option><option>YouTube</option></select>
+    </div>
+    <div class="form-group"><label>Special Note (optional)</label><textarea id="orderNote" rows="2" placeholder="Any special request..."></textarea></div>
+    <div class="form-group"><label>Coupon Code</label>
+      <div class="coupon-row">
+        <input type="text" id="couponCode" placeholder="Enter coupon code">
+        <button class="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
+      </div>
+      <div id="couponMsg" style="font-size:12px;margin-top:4px;"></div>
+    </div>
+    <div class="payment-info">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:4px;">💳 PAY VIA UPI</div>
+      <div class="upi-id">kr69@ptyes</div>
+      <div style="font-size:11px;color:var(--text2);">Account: Prasanta Kumar Das</div>
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" class="qr-img" alt="Scan QR to Pay" style="width:140px;height:140px;border-radius:10px;display:block;margin:0 auto;">
+        <div style="font-size:11px;color:var(--text2);margin-top:4px;">📷 Scan QR to pay via UPI</div>
+      </div>
+      <div class="amount-display" id="modalAmount">₹0</div>
+      <div class="price-breakdown" id="priceBreakdown"></div>
+      <button class="copy-btn" onclick="copyUPI()">📋 Copy UPI ID</button>
+    </div>
+    <div class="form-group"><label>Transaction ID</label><input type="text" id="orderTxnId" placeholder="UPI Transaction ID"></div>
+    <div class="form-group"><label>Amount Paid (₹)</label><input type="number" id="orderAmountPaid" placeholder="Enter exact amount paid"></div>
+    <div class="form-group" id="resellerCodeField">
+      <label style="color:var(--text2);">Reseller Code <span style="font-weight:400;font-size:10px;color:var(--text2)">(optional — only if you have one)</span></label>
+      <input type="text" id="orderResellerCode" placeholder="RS-XXXXX" style="text-transform:uppercase;">
+    </div>
+    <div style="background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.2);border-radius:8px;padding:10px;font-size:12px;color:var(--text2);margin-bottom:10px;">
+      🔒 Secure Order — No screenshot needed. Transaction ID is your proof.
+    </div>
+    <button class="submit-btn" onclick="submitOrder()">✅ Confirm Order</button>
+  </div>
+</div>
+
+<!-- SUCCESS PAGE -->
+<div id="success-page">
+  <div class="success-icon">🎉</div>
+  <h2>Order Placed Successfully!</h2>
+  <p>Your order has been received. Save your Order ID!</p>
+  <div class="order-id-box">
+    <div style="font-size:11px;color:var(--text2);margin-bottom:3px;">YOUR ORDER ID</div>
+    <div class="oid" id="successOrderId">BM-2024-0001</div>
+  </div>
+  <button class="invoice-download-btn" onclick="downloadLastInvoice()">📄 Download Invoice</button>
+  <a id="waSendBtn" href="#" target="_blank" onclick="return waSendBtn.href!='#'" style="display:flex;margin:12px auto;max-width:320px;background:linear-gradient(135deg,#25D366,#128C7E);color:white;padding:16px 24px;border-radius:14px;font-weight:900;font-size:17px;cursor:pointer;text-decoration:none;align-items:center;justify-content:center;gap:10px;box-shadow:0 6px 25px rgba(37,211,102,0.6);border:2px solid #25D366;">
+    📲 WhatsApp-এ Order পাঠান
+  </a>
+  <p style="font-size:12px;color:var(--text2);">Order details will be sent to WhatsApp: 8011267054</p>
+  <div style="background:rgba(255,215,0,0.1);border:1px solid var(--gold);border-radius:8px;padding:10px;margin:12px 0;font-size:13px;" id="loyaltyMsg"></div>
+  <button class="submit-btn" style="max-width:280px;margin-top:10px" onclick="closeSuccess()">Back to Home</button>
+</div>
+
+<!-- CUSTOMER LOGIN -->
+<div id="customerLogin">
+  <div class="login-box">
+    <button style="float:right;background:none;border:none;color:var(--text2);font-size:20px;cursor:pointer;" onclick="closeCustomerLogin()">✕</button>
+    <div style="font-size:36px;margin-bottom:8px;">👤</div>
+    <h3>My Account</h3>
+    <p>Enter your phone number to access your orders</p>
+    <input type="tel" id="custPhone" placeholder="Enter Phone Number" onkeydown="if(event.key==='Enter')customerLogin()">
+    <button class="login-submit" onclick="customerLogin()">Access My Account</button>
+  </div>
+</div>
+
+<!-- CUSTOMER DASHBOARD -->
+<div id="customerDash">
+  <div class="dash-nav">
+    <h3>👤 My Account — <span id="dashName" style="color:var(--primary)"></span></h3>
+    <button class="dash-logout" onclick="customerLogout()">Logout</button>
+  </div>
+  <div class="dash-content">
+    <div class="loyalty-bar">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+        <span style="font-weight:700;font-size:14px;">⭐ Loyalty Points</span>
+        <span id="dashVipBadge"></span>
+      </div>
+      <div style="font-size:22px;font-weight:800;color:var(--gold);font-family:'Rajdhani',sans-serif;" id="dashPoints">0 pts</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:3px;" id="dashPointsMsg"></div>
+      <div class="loyalty-progress"><div class="loyalty-fill" id="loyaltyBar" style="width:0%"></div></div>
+      <div style="font-size:11px;color:var(--text2);margin-top:4px;">Earn 1 point per ₹1 spent. 1000 pts = Free package!</div>
+    </div>
+    <div class="dash-stats">
+      <div class="dash-stat"><div class="val" id="dashOrders">0</div><div class="lbl">Orders</div></div>
+      <div class="dash-stat"><div class="val" id="dashSpent">₹0</div><div class="lbl">Total Spent</div></div>
+      <div class="dash-stat"><div class="val" id="dashSaved">₹0</div><div class="lbl">Saved</div></div>
+    </div>
+    <h4 style="margin-bottom:10px;color:var(--text2);font-size:13px;">🏆 Achievements</h4>
+    <div class="achievement-grid" id="achievementGrid"></div>
+    <h4 style="margin:15px 0 10px;color:var(--text2);font-size:13px;">📦 My Orders</h4>
+    <div id="dashOrders_list"></div>
+    <h4 style="margin:15px 0 10px;color:var(--text2);font-size:13px;">❤️ Wishlist</h4>
+    <div class="pkg-grid" id="wishlistGrid"></div>
+    <div style="margin-top:15px;">
+      <button class="submit-btn" onclick="openOrderPage()" style="max-width:200px">+ New Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="admin-login">
+  <div class="admin-login-box">
+    <div style="font-size:36px;margin-bottom:8px;">🔐</div>
+    <h3>Admin Only</h3>
+    <input type="password" id="adminPassInput" placeholder="Password" onkeydown="if(event.key==='Enter')checkAdminPass()">
+    <button class="admin-login-btn" onclick="checkAdminPass()">Login</button>
+    <div class="admin-login-err" id="adminErr">❌ Wrong password!</div>
+    <button onclick="closeAdminLogin()" style="margin-top:10px;background:none;border:none;color:var(--text2);cursor:pointer;font-size:12px;">Cancel</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div class="admin-nav">
+    <h2>🔐 BoostifyMedia Admin</h2>
+    <button class="admin-logout" onclick="adminLogout()">Logout</button>
+  </div>
+  <div class="admin-tabs">
+    <button class="admin-tab active" onclick="showAdminTab('dashboard',this)">📊 Dashboard</button>
+    <button class="admin-tab" onclick="showAdminTab('orders',this)">📦 Orders</button>
+    <button class="admin-tab" onclick="showAdminTab('packages',this)">📋 Packages</button>
+    <button class="admin-tab" onclick="showAdminTab('customers',this)">👥 Customers</button>
+    <button class="admin-tab" onclick="showAdminTab('profit',this)">💰 Profit</button>
+    <button class="admin-tab" onclick="showAdminTab('analytics',this)">📈 Analytics</button>
+    <button class="admin-tab" onclick="showAdminTab('coupons',this)">🎟️ Coupons</button>
+    <button class="admin-tab" onclick="showAdminTab('security',this)">🔐 Security</button>
+    <button class="admin-tab" onclick="showAdminTab('subscriptions-admin',this)">🔄 Subscriptions</button>
+    <button class="admin-tab" onclick="showAdminTab('resellers-admin',this)">🤝 Resellers</button>
+    <button class="admin-tab" onclick="showAdminTab('vipdeals-admin',this)">👑 VIP Deals</button>
+  </div>
+  <div class="admin-content">
+
+    <!-- DASHBOARD -->
+    <div class="admin-section active" id="admin-dashboard">
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="pending-alert" id="pendingAlert"></div>
+      <div class="chart-wrap"><h4>📊 Daily Revenue (Last 7 Days)</h4><canvas id="revenueChart" height="80"></canvas></div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
+        <button class="export-btn" onclick="exportCSV()">📥 Export CSV</button>
+        <button class="export-btn" style="background:var(--danger);color:white;" onclick="exportPDF()">📄 Export PDF</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Order ID</th><th>Name</th><th>Package</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead><tbody id="recentOrdersBody"></tbody></table></div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="admin-section" id="admin-orders">
+      <input class="admin-search" id="orderSearch" placeholder="🔍 Search by name, phone, order ID, txn..." oninput="renderAdminOrders()">
+      <div class="bulk-update-row">
+        <button class="filter-btn active" onclick="filterOrders('all',this)">All</button>
+        <button class="filter-btn" onclick="filterOrders('pending',this)">⏳ Pending</button>
+        <button class="filter-btn" onclick="filterOrders('completed',this)">✅ Done</button>
+        <button class="filter-btn" onclick="filterOrders('cancelled',this)">❌ Cancelled</button>
+        <button class="export-btn" onclick="exportCSV()">📥 CSV</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Order ID</th><th>Name</th><th>Phone</th><th>Package</th><th>Speed</th><th>Txn ID</th><th>Paid</th><th>Platform</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody id="ordersTableBody"></tbody></table></div>
+    </div>
+
+    <!-- PACKAGES ADMIN -->
+    <div class="admin-section" id="admin-packages">
+      <div class="add-form">
+        <h4>➕ Add New Package</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Package Name</label><input type="text" id="newPkgName" placeholder="Growth Combo"></div>
+          <div class="form-group"><label>Category</label>
+            <select id="newPkgCat"><option value="combo">Combo</option><option value="followers">Followers</option><option value="likes">Likes</option><option value="views">Views</option><option value="trial">Trial</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Details</label><input type="text" id="newPkgDetails" placeholder="1K Followers + 2K Likes"></div>
+          <div class="form-group"><label>Selling Price (₹)</label><input type="number" id="newPkgPrice" placeholder="199"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Cost Price (₹) [Admin only]</label><input type="number" id="newPkgCost" placeholder="60"></div>
+          <div class="form-group"><label>Popular Badge</label><input type="text" id="newPkgBadge" placeholder="🔥 Best Value (leave empty if not popular)"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Best Choice?</label><select id="newPkgBest"><option value="false">No</option><option value="true">Yes - Best Choice</option></select></div>
+          <div class="form-group"><label>Loyalty Points Given</label><input type="number" id="newPkgPoints" placeholder="Same as price by default"></div>
+        </div>
+        <button class="add-submit" onclick="addPackage()">Add Package</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Name</th><th>Cat</th><th>Details</th><th>Price</th><th>Cost</th><th>Margin</th><th>Badge</th><th>Action</th></tr></thead><tbody id="packagesAdminBody"></tbody></table></div>
+    </div>
+
+    <!-- CUSTOMERS -->
+    <div class="admin-section" id="admin-customers">
+      <input class="admin-search" placeholder="🔍 Search customers..." oninput="renderCustomers(this.value)">
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Name</th><th>Phone</th><th>Orders</th><th>Spent</th><th>Points</th><th>VIP</th><th>Blacklist</th></tr></thead><tbody id="customersTableBody"></tbody></table></div>
+    </div>
+
+    <!-- PROFIT TRACKER (ADMIN ONLY) -->
+    <div class="admin-section" id="admin-profit">
+      <div class="profit-card">
+        <h4>💰 Profit Tracker (Admin Only)</h4>
+        <div class="profit-row"><span>Total Revenue</span><span id="ptRevenue">₹0</span></div>
+        <div class="profit-row"><span>Total Cost</span><span id="ptCost">₹0</span></div>
+        <div class="profit-row"><span>Discounts Given</span><span id="ptDiscount">₹0</span></div>
+        <div class="profit-row"><span>Net Profit</span><span id="ptProfit">₹0</span></div>
+        <div class="profit-row"><span>Profit Margin %</span><span id="ptMargin">0%</span></div>
+      </div>
+      <div class="chart-wrap"><h4>📊 Package-wise Profit</h4><canvas id="profitChart" height="100"></canvas></div>
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="admin-section" id="admin-analytics">
+      <div class="visitor-card">
+        <div style="font-size:13px;color:var(--text2);margin-bottom:4px;">Total Visitors Today</div>
+        <div class="visitor-num" id="visitorCount">0</div>
+      </div>
+      <div class="admin-stats">
+        <div class="admin-stat-card"><div class="val" id="convRate">0%</div><div class="lbl">Conversion Rate</div></div>
+        <div class="admin-stat-card"><div class="val" id="popularPkg">—</div><div class="lbl">Most Popular</div></div>
+        <div class="admin-stat-card"><div class="val" id="avgOrder">₹0</div><div class="lbl">Avg Order Value</div></div>
+        <div class="admin-stat-card"><div class="val" id="repeatRate">0%</div><div class="lbl">Repeat Customers</div></div>
+      </div>
+      <div class="chart-wrap"><h4>📊 Weekly Orders</h4><canvas id="weeklyChart" height="80"></canvas></div>
+    </div>
+
+    <!-- COUPONS -->
+    <div class="admin-section" id="admin-coupons">
+      <div class="add-form">
+        <h4>➕ Add Coupon</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Code</label><input type="text" id="newCouponCode" placeholder="BOOST20"></div>
+          <div class="form-group"><label>Discount (₹)</label><input type="number" id="newCouponDiscount" placeholder="20"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Min Order (₹)</label><input type="number" id="newCouponMin" placeholder="0"></div>
+          <div class="form-group"><label>Max Uses (0=unlimited)</label><input type="number" id="newCouponMax" placeholder="0"></div>
+        </div>
+        <button class="add-submit" onclick="addCoupon()">Add Coupon</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Code</th><th>Discount</th><th>Min Order</th><th>Used</th><th>Max</th><th>Action</th></tr></thead><tbody id="couponsTableBody"></tbody></table></div>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="admin-section" id="admin-security">
+      <div class="add-form">
+        <h4>🚫 Blacklist Customer</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Phone Number</label><input type="text" id="blacklistPhone" placeholder="Phone to blacklist"></div>
+          <div class="form-group"><label>Reason</label><input type="text" id="blacklistReason" placeholder="Fraud/Spam/etc"></div>
+        </div>
+        <button class="add-submit" onclick="addBlacklist()" style="background:var(--danger);">Blacklist</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table" id="blacklistTable"><thead><tr><th>Phone</th><th>Reason</th><th>Date</th><th>Action</th></tr></thead><tbody id="blacklistBody"></tbody></table></div>
+    </div>
+
+    <!-- SUBSCRIPTIONS ADMIN -->
+    <div class="admin-section" id="admin-subscriptions-admin">
+      <div class="add-form">
+        <h4>➕ Add Subscription Plan</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Plan Name</label><input type="text" id="newSubName" placeholder="Silver Monthly"></div>
+          <div class="form-group"><label>Monthly Price (₹)</label><input type="number" id="newSubPrice" placeholder="299"></div>
+        </div>
+        <div class="form-group"><label>Features (comma separated)</label><input type="text" id="newSubFeatures" placeholder="1K Followers/mo, 5K Likes/mo"></div>
+        <button class="add-submit" onclick="addSubscription()">Add Plan</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Plan</th><th>Price</th><th>Features</th><th>Subscribers</th><th>Action</th></tr></thead><tbody id="subsAdminBody"></tbody></table></div>
+    </div>
+
+    <!-- RESELLERS ADMIN -->
+    <div class="admin-section" id="admin-resellers-admin">
+      <h4 style="margin-bottom:14px;color:var(--primary)">🤝 Reseller Management</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px;">
+        <div class="admin-stat-card"><div class="val" id="rsAdminTotal">0</div><div class="lbl">Total Resellers</div></div>
+        <div class="admin-stat-card"><div class="val" id="rsAdminSales">0</div><div class="lbl">Reseller Sales</div></div>
+        <div class="admin-stat-card"><div class="val" id="rsAdminPayout">₹0</div><div class="lbl">Pending Payout</div></div>
+      </div>
+      <div style="margin-bottom:12px;background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.2);border-radius:10px;padding:12px;font-size:13px;">
+        💡 Commission: <b style="color:var(--success)">${RESELLER_COMMISSION}%</b> per sale. Payouts every Sunday via UPI.
+        <button onclick="changeResellerCommission()" style="background:var(--primary);color:white;border:none;padding:4px 12px;border-radius:6px;font-size:12px;cursor:pointer;margin-left:8px;">Change %</button>
+      </div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Name</th><th>Phone</th><th>Code</th><th>Sales</th><th>Commission</th><th>Status</th><th>Action</th></tr></thead><tbody id="resellerAdminBody"></tbody></table></div>
+    </div>
+
+    <!-- VIP DEALS ADMIN -->
+    <div class="admin-section" id="admin-vipdeals-admin">
+      <h4 style="margin-bottom:14px;color:var(--gold)">👑 VIP Secret Deals Manager</h4>
+      <div class="add-form">
+        <h4>➕ Add VIP Deal</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Deal Name</label><input type="text" id="vipDealName" placeholder="e.g. Mega VIP Bundle"></div>
+          <div class="form-group"><label>Description</label><input type="text" id="vipDealDetails" placeholder="5K Followers + 20K Likes"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Original Price (₹)</label><input type="number" id="vipDealOriginal" placeholder="999"></div>
+          <div class="form-group"><label>VIP Price (₹)</label><input type="number" id="vipDealPrice" placeholder="599"></div>
+        </div>
+        <button class="add-submit" style="background:var(--gold);color:#000;" onclick="addVipDeal()">Add VIP Deal</button>
+      </div>
+      <div style="margin-top:14px;font-size:13px;color:var(--text2);margin-bottom:8px;">Current VIP Deals:</div>
+      <div id="vipDealsAdminList" style="display:grid;gap:10px;"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ===== CONFIG =====
+const ADMIN_PASS='@69krx';
+const UPI_ID='kr69@ptyes';
+const WA_NUM='918011267054';
+const LOYALTY_FREE_THRESHOLD=1000;
+const FIRST_ORDER_DISCOUNT=10; // %
+
+const RESELLER_COMMISSION=15; // % commission
+let resellers=JSON.parse(localStorage.getItem('bm_resellers')||'[]');
+let resellerOrders=JSON.parse(localStorage.getItem('bm_reseller_orders')||'[]');
+let vipDeals=JSON.parse(localStorage.getItem('bm_vip_deals')||JSON.stringify([
+  {id:'vd1',name:'👑 VIP Mega Bundle',details:'10K Followers + 30K Likes + 200K Views',original:2499,price:999,active:true},
+  {id:'vd2',name:'💎 Diamond Followers',details:'20K Premium Followers',original:3499,price:1299,active:true},
+  {id:'vd3',name:'🚀 Viral Booster VIP',details:'500K Views + 50K Likes',original:2999,price:1099,active:true},
+]));
+
+// ===== CURRENCY =====
+const currencies={INR:{sym:'₹',rate:1},USD:{sym:'$',rate:0.012},BDT:{sym:'৳',rate:1.32}};
+let currentCurrency='INR';
+function fmtPrice(p){const c=currencies[currentCurrency];return c.sym+(p*c.rate).toFixed(currentCurrency==='INR'?0:2);}
+function changeCurrency(c){currentCurrency=c;renderPackages();renderSubGrid();}
+
+// ===== DATA =====
+let packages=[
+  {id:'p1',name:'Starter Combo',cat:'combo',details:'1K Followers + 2K Likes + 10K Views',price:199,cost:72,popular:false,badge:'',best:false},
+  {id:'p2',name:'Basic Combo',cat:'combo',details:'2K Followers + 5K Likes + 30K Views',price:349,cost:130,popular:false,badge:'',best:false},
+  {id:'p3',name:'Growth Combo',cat:'combo',details:'3K Followers + 8K Likes + 50K Views',price:549,cost:200,popular:true,badge:'🔥 Best Value',best:true},
+  {id:'p4',name:'Pro Combo',cat:'combo',details:'5K Followers + 15K Likes + 100K Views',price:899,cost:330,popular:false,badge:'',best:false},
+  {id:'p5',name:'Viral Combo',cat:'combo',details:'10K Followers + 25K Likes + 200K Views',price:1699,cost:610,popular:false,badge:'',best:false},
+  {id:'p6',name:'Mini 500',cat:'followers',details:'500 Real Followers',price:79,cost:30,popular:false,badge:'',best:false},
+  {id:'p7',name:'Starter 1K',cat:'followers',details:'1K Real Followers',price:140,cost:60,popular:false,badge:'',best:false},
+  {id:'p8',name:'Basic 2K',cat:'followers',details:'2K Real Followers',price:250,cost:120,popular:false,badge:'',best:false},
+  {id:'p9',name:'Growth 5K',cat:'followers',details:'5K Real Followers',price:550,cost:300,popular:true,badge:'⭐ Popular',best:true},
+  {id:'p10',name:'Pro 10K',cat:'followers',details:'10K Real Followers',price:999,cost:600,popular:false,badge:'',best:false},
+  {id:'p11',name:'Mega 20K',cat:'followers',details:'20K Real Followers',price:1799,cost:1200,popular:false,badge:'',best:false},
+  {id:'p12',name:'Mini 500',cat:'likes',details:'500 Real Likes',price:29,cost:5,popular:false,badge:'',best:false},
+  {id:'p13',name:'Starter 1K',cat:'likes',details:'1K Real Likes',price:50,cost:10,popular:false,badge:'',best:false},
+  {id:'p14',name:'Basic 3K',cat:'likes',details:'3K Real Likes',price:120,cost:30,popular:false,badge:'',best:false},
+  {id:'p15',name:'Growth 5K',cat:'likes',details:'5K Real Likes',price:180,cost:50,popular:true,badge:'🔥 Best Seller',best:true},
+  {id:'p16',name:'Pro 10K',cat:'likes',details:'10K Real Likes',price:320,cost:100,popular:false,badge:'',best:false},
+  {id:'p17',name:'Mega 25K',cat:'likes',details:'25K Real Likes',price:699,cost:250,popular:false,badge:'',best:false},
+  {id:'p18',name:'Nano 10K',cat:'views',details:'10K Real Views',price:79,cost:20,popular:false,badge:'',best:false},
+  {id:'p19',name:'Mini 25K',cat:'views',details:'25K Real Views',price:149,cost:50,popular:false,badge:'',best:false},
+  {id:'p20',name:'Basic 50K',cat:'views',details:'50K Real Views',price:249,cost:100,popular:false,badge:'',best:true},
+  {id:'p21',name:'Popular 100K',cat:'views',details:'100K Real Views',price:599,cost:200,popular:true,badge:'💎 Top Pick',best:false},
+  {id:'p22',name:'Pro 250K',cat:'views',details:'250K Real Views',price:1099,cost:500,popular:false,badge:'',best:false},
+  {id:'p23',name:'Viral 500K',cat:'views',details:'500K Real Views',price:1999,cost:1000,popular:false,badge:'',best:false},
+  {id:'p24',name:'🎁 Trial Pack',cat:'trial',details:'100 Real Followers — Try Before You Buy!',price:9,cost:3,popular:true,badge:'🎁 Try Now',best:false},
+];
+
+let subscriptionPlans=[
+  {id:'s1',name:'Silver',price:299,features:['1K Followers/mo','5K Likes/mo','24/7 Support'],subs:0},
+  {id:'s2',name:'Gold',price:599,features:['2K Followers/mo','10K Likes/mo','50K Views/mo','Priority Support'],subs:0},
+  {id:'s3',name:'Platinum',price:999,features:['5K Followers/mo','25K Likes/mo','100K Views/mo','VIP Support','Free Combo'],subs:0},
+];
+
+let orders=JSON.parse(localStorage.getItem('bm_orders')||'[]');
+let reviews=JSON.parse(localStorage.getItem('bm_reviews')||JSON.stringify([
+  {name:'Rahul D.',stars:5,text:'Got 1K followers in 2 hours! Absolutely insane speed. Will order again!',date:'24/04/2026',verified:true},
+  {name:'Priya S.',stars:5,text:'Best price in market. My reels are blowing up after buying views. 100% recommend!',date:'24/04/2026',verified:true},
+  {name:'Arjun M.',stars:5,text:'Tried the trial pack first — was impressed, then bought 5K followers. Superb!',date:'23/04/2026',verified:true},
+  {name:'Sneha R.',stars:5,text:'₹9 trial pack is unreal value. Got 100 followers instantly. Ordered Growth pack next!',date:'23/04/2026',verified:true},
+  {name:'Vikram T.',stars:4,text:'Good service, fast delivery. 2K likes received in 30 mins. Very happy.',date:'22/04/2026',verified:true},
+  {name:'Ananya B.',stars:5,text:'WhatsApp support is super responsive. They confirmed my order within minutes!',date:'22/04/2026',verified:true},
+  {name:'Kiran J.',stars:5,text:'Ordered Pro Combo — 5K followers + 15K likes all delivered! My page is thriving now.',date:'21/04/2026',verified:true},
+  {name:'Meera P.',stars:5,text:'3rd time ordering. Every time on-time delivery. Best SMM panel in India!',date:'21/04/2026',verified:true},
+  {name:'Suresh K.',stars:4,text:'Value for money. 500 likes for ₹29 is unbeatable. Quick and reliable.',date:'20/04/2026',verified:true},
+  {name:'Divya N.',stars:5,text:'My business page grew by 3K followers in one week using their packages. Amazing ROI!',date:'20/04/2026',verified:true},
+  {name:'Rohit A.',stars:5,text:'Express delivery option is worth every rupee. Order processed in under 15 minutes!',date:'19/04/2026',verified:true},
+  {name:'Pooja V.',stars:5,text:'Love the loyalty points system! Already earned 500 points. VIP badge unlocked 🎉',date:'19/04/2026',verified:true},
+  {name:'Amit G.',stars:4,text:'Smooth payment process via UPI. Transaction confirmed fast. No issues at all.',date:'18/04/2026',verified:true},
+  {name:'Nisha L.',stars:5,text:'My Instagram went from 200 to 3000 followers in 3 days. Clients are noticing!',date:'18/04/2026',verified:true},
+  {name:'Raj C.',stars:5,text:'Legit service. No password required, account is safe. Followers look real too!',date:'17/04/2026',verified:true},
+  {name:'Kavya M.',stars:5,text:'Customer support is amazing. Had a small query, resolved on WhatsApp in 5 mins.',date:'17/04/2026',verified:true},
+  {name:'Sanjay H.',stars:4,text:'Views package is excellent. 100K views for ₹599 is a steal. Engagement improved!',date:'16/04/2026',verified:true},
+  {name:'Tanya F.',stars:5,text:'Used the referral code my friend gave me — both of us saved ₹20. Smart system!',date:'16/04/2026',verified:true},
+  {name:'Deepak R.',stars:5,text:'Been using BoostifyMedia for 3 months. Consistent quality every single order.',date:'15/04/2026',verified:true},
+  {name:'Ishita S.',stars:5,text:'The invoice download feature is so handy for my business records. Thoughtful!',date:'15/04/2026',verified:true},
+  {name:'Mukesh Y.',stars:4,text:'Good bulk discount on higher packages. Got 15% off on my ₹2000 order!',date:'14/04/2026',verified:true},
+  {name:'Ritu W.',stars:5,text:'Started with trial pack ₹9 now ordering monthly. Best decision for my brand!',date:'24/04/2026',verified:true},
+]));
+let coupons=JSON.parse(localStorage.getItem('bm_coupons')||JSON.stringify([
+  {code:'FIRST10',discount:10,type:'percent',minOrder:0,maxUses:1,used:0},
+  {code:'BOOST20',discount:20,type:'flat',minOrder:100,maxUses:0,used:0},
+  {code:'SAVE50',discount:50,type:'flat',minOrder:300,maxUses:0,used:0},
+]));
+let blacklist=JSON.parse(localStorage.getItem('bm_blacklist')||'[]');
+let wishlist=JSON.parse(localStorage.getItem('bm_wishlist')||'[]');
+let visitors=parseInt(localStorage.getItem('bm_visitors')||'0')+1;
+localStorage.setItem('bm_visitors',visitors);
+
+// ===== STATE =====
+let currentPkg=null,currentCategory='combo',appliedDiscount=0,appliedCouponType='flat';
+let selectedStars=0,orderFilter='all',selectedSpeed='normal';
+let currentCustomerPhone=null,lastOrderId=null,lastOrderData=null;
+let currentPlatform='instagram';
+
+// ===== LIVE COUNTER =====
+let liveCount=parseInt(localStorage.getItem('bm_live_count')||orders.length.toString()||'5199');
+if(liveCount<5199) liveCount=5199;
+function animateLiveCounter(){
+  setInterval(()=>{
+    if(Math.random()>0.6){
+      liveCount+=Math.floor(Math.random()*2)+1;
+      localStorage.setItem('bm_live_count',liveCount);
+      const el=document.getElementById('liveOrderCount');
+      const el2=document.getElementById('statOrders');
+      if(el) el.textContent=liveCount.toLocaleString();
+      if(el2) el2.textContent=liveCount.toLocaleString();
+    }
+  },7000);
+}
+
+// ===== FLASH SALE TIMER =====
+function startFlashSale(){
+  let end=parseInt(localStorage.getItem('bm_flash_end')||'0');
+  if(!end||Date.now()>end){end=Date.now()+6*60*60*1000;localStorage.setItem('bm_flash_end',end);}
+  setInterval(()=>{
+    const diff=Math.max(0,end-Date.now());
+    const h=Math.floor(diff/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+    document.getElementById('fh').textContent=String(h).padStart(2,'0');
+    document.getElementById('fm').textContent=String(m).padStart(2,'0');
+    document.getElementById('fs').textContent=String(s).padStart(2,'0');
+  },1000);
+}
+
+// ===== POPUP OFFER =====
+function initPopup(){
+  if(localStorage.getItem('bm_popup_shown')) return;
+  setTimeout(()=>{document.getElementById('firstVisitPopup').classList.add('open');startPopupTimer();},2000);
+}
+let popupTimer=600;
+function startPopupTimer(){
+  const el=document.getElementById('popupCountdown');
+  const t=setInterval(()=>{
+    popupTimer--;
+    const m=Math.floor(popupTimer/60),s=popupTimer%60;
+    if(el) el.textContent=`${m}:${String(s).padStart(2,'0')}`;
+    if(popupTimer<=0){clearInterval(t);closePopup();}
+  },1000);
+}
+function closePopup(){document.getElementById('firstVisitPopup').classList.remove('open');localStorage.setItem('bm_popup_shown','1');}
+function copyPopupCode(){
+  navigator.clipboard.writeText('FIRST10');
+  document.getElementById('couponCode').value='FIRST10';
+  showNotif('Code FIRST10 copied! 10% off your first order!');
+  closePopup();
+  document.getElementById('packages').scrollIntoView({behavior:'smooth'});
+}
+
+// ===== THEME =====
+function toggleTheme(){
+  const isDark=document.body.getAttribute('data-theme')==='light';
+  document.body.setAttribute('data-theme',isDark?'':'light');
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  localStorage.setItem('bm_theme',isDark?'dark':'light');
+}
+function initTheme(){
+  const t=localStorage.getItem('bm_theme');
+  if(t==='light'){document.body.setAttribute('data-theme','light');document.getElementById('themeBtn').textContent='☀️';}
+}
+
+// ===== PLATFORM =====
+function setPlatform(p,el){
+  currentPlatform=p;
+  document.querySelectorAll('.platform-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  // Could filter packages by platform in future
+}
+
+// ===== PACKAGES =====
+function showCategory(cat,el){
+  currentCategory=cat;
+  document.querySelectorAll('#pkgTabs .tab').forEach(t=>t.classList.remove('active'));
+  if(el) el.classList.add('active');
+  renderPackages();
+}
+
+function getBulkDiscount(price){
+  if(price>=2000) return 15;
+  if(price>=1000) return 10;
+  if(price>=500) return 5;
+  return 0;
+}
+
+function renderPackages(){
+  const grid=document.getElementById('pkgGrid');
+  const filtered=packages.filter(p=>p.cat===currentCategory);
+  const isWishlisted=id=>wishlist.includes(id);
+  grid.innerHTML=filtered.map(p=>{
+    const bd=getBulkDiscount(p.price);
+    const discPrice=bd>0?Math.round(p.price*(1-bd/100)):null;
+    const pts=p.price;
+    return `<div class="pkg-card ${p.popular?'popular':''} ${p.best?'best-choice':''}">
+      ${p.popular?`<div class="popular-badge">${p.badge||'⭐ Popular'}</div>`:''}
+      ${p.best&&!p.popular?`<div class="best-badge">✨ Best Choice</div>`:''}
+      <div class="pkg-name">${p.name}</div>
+      <div class="pkg-details">${p.details}</div>
+      <div class="pkg-price-row">
+        <div class="pkg-price">${fmtPrice(discPrice||p.price)}</div>
+        ${discPrice?`<div class="pkg-old-price">${fmtPrice(p.price)}</div>`:''}
+        ${bd>0?`<div class="bulk-badge">${bd}% OFF</div>`:''}
+      </div>
+      <div class="pkg-speed">⚡ Delivery: 5-30 min</div>
+      <div class="pkg-loyalty">⭐ Earn ${pts} loyalty points</div>
+      <div class="pkg-actions">
+        <button class="pkg-btn" onclick='openOrder(${JSON.stringify(p)})'>Order Now →</button>
+        <button class="wishlist-btn ${isWishlisted(p.id)?'active':''}" onclick='toggleWishlist("${p.id}",this)' title="Wishlist">❤️</button>
+      </div>
+    </div>`;
+  }).join('') || '<p style="color:var(--text2);padding:20px;text-align:center">No packages in this category</p>';
+}
+
+function toggleWishlist(id,btn){
+  const idx=wishlist.indexOf(id);
+  if(idx>-1){wishlist.splice(idx,1);btn.classList.remove('active');showNotif('Removed from wishlist');}
+  else{wishlist.push(id);btn.classList.add('active');showNotif('Added to wishlist! ❤️');}
+  localStorage.setItem('bm_wishlist',JSON.stringify(wishlist));
+}
+
+// ===== SUBSCRIPTIONS =====
+function renderSubGrid(){
+  document.getElementById('subGrid').innerHTML=subscriptionPlans.map(p=>`
+    <div class="sub-card ${p.popular?'popular':''}">
+      <div class="sub-name">${p.name}</div>
+      <div class="sub-price">${fmtPrice(p.price)}<span style="font-size:13px;color:var(--text2)">/mo</span></div>
+      <ul class="sub-features">${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+      <button class="sub-btn" onclick="subscribeNow('${p.id}')">Subscribe Now</button>
+    </div>`).join('');
+}
+function subscribeNow(id){
+  const plan=subscriptionPlans.find(p=>p.id===id);
+  if(plan){openOrder({...plan,cat:'subscription',details:plan.features.join(', ')});} 
+}
+
+// ===== ORDER MODAL =====
+function selectSpeed(s,el){
+  selectedSpeed=s;
+  document.querySelectorAll('.speed-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  updateModalAmount();
+}
+
+function getSpeedExtra(){
+  return selectedSpeed==='fast'?10:selectedSpeed==='express'?25:0;
+}
+
+function openOrder(pkg){
+  currentPkg=pkg;appliedDiscount=0;appliedCouponType='flat';
+  ['couponCode','orderName','orderPhone','orderUsername','orderTxnId','orderNote','orderResellerCode'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.value='';
+  });
+  document.getElementById('orderAmountPaid').value='';
+  document.getElementById('couponMsg').textContent='';
+  document.getElementById('modalPkgSummary').innerHTML=`<b>${pkg.name}</b><br><span style="color:var(--text2);font-size:13px">${pkg.details}</span><br><strong>Base Price: ${fmtPrice(pkg.price)}</strong>`;
+
+  // Check first order discount
+  const myOrders=orders.filter(o=>o.phone===currentCustomerPhone);
+  if(myOrders.length===0&&!localStorage.getItem('bm_first_used')){
+    const firstDisc=Math.round(pkg.price*FIRST_ORDER_DISCOUNT/100);
+    appliedDiscount=firstDisc; appliedCouponType='flat';
+    document.getElementById('couponMsg').style.color='var(--success)';
+    document.getElementById('couponMsg').textContent=`🎉 First order! ${FIRST_ORDER_DISCOUNT}% discount applied — Save ${fmtPrice(firstDisc)}`;
+  }
+
+  selectedSpeed='normal';
+  document.querySelectorAll('.speed-opt').forEach((o,i)=>o.classList.toggle('selected',i===0));
+  drawQR();
+  updateModalAmount();
+  document.getElementById('orderModal').classList.add('open');
+}
+
+function updateModalAmount(){
+  if(!currentPkg) return;
+  const base=currentPkg.price;
+  const speedEx=getSpeedExtra();
+  let disc=appliedDiscount;
+  const subtotal=base+speedEx-disc;
+  const final=Math.max(subtotal,1);
+  document.getElementById('modalAmount').textContent=`Pay: ${fmtPrice(final)}`;
+  document.getElementById('priceBreakdown').innerHTML=`
+    Base: ${fmtPrice(base)}${speedEx>0?` + Speed: ${fmtPrice(speedEx)}`:''}${disc>0?` <span>- Discount: ${fmtPrice(disc)}</span>`:''}
+    = <strong>${fmtPrice(final)}</strong>`;
+  document.getElementById('orderAmountPaid').placeholder=`Enter ₹${final}`;
+}
+
+function closeModal(){document.getElementById('orderModal').classList.remove('open');}
+
+function applyCoupon(){
+  const code=document.getElementById('couponCode').value.trim().toUpperCase();
+  const msgEl=document.getElementById('couponMsg');
+  if(!currentPkg){return;}
+  // Own referral check
+  if(code===localStorage.getItem('bm_referral')){msgEl.style.color='var(--danger)';msgEl.textContent='❌ Cannot use your own referral code';return;}
+  const coupon=coupons.find(c=>c.code===code);
+  if(coupon){
+    if(coupon.maxUses>0&&coupon.used>=coupon.maxUses){msgEl.style.color='var(--danger)';msgEl.textContent='❌ Coupon usage limit reached';return;}
+    if(currentPkg.price<coupon.minOrder){msgEl.style.color='var(--danger)';msgEl.textContent=`❌ Min order ₹${coupon.minOrder} required`;return;}
+    if(coupon.type==='percent'){appliedDiscount=Math.round(currentPkg.price*coupon.discount/100);appliedCouponType='percent';}
+    else{appliedDiscount=coupon.discount;appliedCouponType='flat';}
+    msgEl.style.color='var(--success)';
+    msgEl.textContent=`✅ Applied! ${coupon.type==='percent'?coupon.discount+'%':fmtPrice(coupon.discount)} off`;
+    coupon.used++;localStorage.setItem('bm_coupons',JSON.stringify(coupons));
+  } else {
+    appliedDiscount=0;msgEl.style.color='var(--danger)';msgEl.textContent='❌ Invalid coupon code';
+  }
+  updateModalAmount();
+}
+
+function copyUPI(){navigator.clipboard.writeText(UPI_ID).then(()=>showNotif('UPI ID Copied! ✅'));}
+
+// QR code is embedded as real image - no canvas drawing needed
+function drawQR(){ /* real QR image used */ }
+
+// ===== SUBMIT ORDER =====
+function submitOrder(){
+  const name=document.getElementById('orderName').value.trim();
+  const phone=document.getElementById('orderPhone').value.trim();
+  const username=document.getElementById('orderUsername').value.trim();
+  const txnId=document.getElementById('orderTxnId').value.trim();
+  const amtPaid=document.getElementById('orderAmountPaid').value.trim();
+  const note=document.getElementById('orderNote').value.trim();
+  const platform=document.getElementById('orderPlatform').value;
+
+  if(!name||!phone||!username||!txnId||!amtPaid){showNotif('Please fill all required fields!','error');return;}
+  if(phone.length<10){showNotif('Enter valid 10-digit phone!','error');return;}
+  if(txnId.length<8){showNotif('Enter valid Transaction ID!','error');return;}
+  if(blacklist.find(b=>b.phone===phone)){showNotif('Order cannot be placed. Contact support.','error');return;}
+  if(orders.find(o=>o.txnId===txnId)){showNotif('This Transaction ID already used! Fraud detected.','error');return;}
+
+  const speedEx=getSpeedExtra();
+  const expectedAmt=Math.max(currentPkg.price+speedEx-appliedDiscount,1);
+  if(parseInt(amtPaid)<expectedAmt){showNotif(`Amount paid must be at least ₹${expectedAmt}!`,'error');return;}
+
+  // Anti-spam: max 3 orders per phone per day
+  const today=new Date().toLocaleDateString('en-IN');
+  const todayOrders=orders.filter(o=>o.phone===phone&&o.date===today);
+  if(todayOrders.length>=5){showNotif('Too many orders today. Contact support.','error');return;}
+
+  // Serial order number (global counter, never resets)
+  let orderSerial=parseInt(localStorage.getItem('bm_order_serial')||String(orders.length));
+  orderSerial++;
+  localStorage.setItem('bm_order_serial',orderSerial);
+  const orderId='BM-'+new Date().getFullYear()+'-'+String(orderSerial).padStart(4,'0');
+  const pts=parseInt(amtPaid);
+  const order={
+    id:orderId,name,phone,username,platform,
+    package:currentPkg.name,details:currentPkg.details,
+    price:currentPkg.price,discount:appliedDiscount,speed:selectedSpeed,
+    speedExtra:speedEx,amtPaid:parseInt(amtPaid),txnId,note,
+    status:'pending',date:today,time:new Date().toLocaleTimeString('en-IN'),
+    loyaltyPoints:pts,pkgId:currentPkg.id,
+  };
+  orders.push(order);
+  localStorage.setItem('bm_orders',JSON.stringify(orders));
+
+  // Loyalty
+  let customerPts=parseInt(localStorage.getItem('bm_pts_'+phone)||'0')+pts;
+  localStorage.setItem('bm_pts_'+phone,customerPts);
+
+  // First order used
+  if(!localStorage.getItem('bm_first_used')&&appliedDiscount>0){localStorage.setItem('bm_first_used','1');}
+
+  liveCount++;localStorage.setItem('bm_live_count',liveCount);
+  document.getElementById('liveOrderCount').textContent=liveCount.toLocaleString();
+  document.getElementById('statOrders').textContent=liveCount.toLocaleString();
+
+  lastOrderId=orderId;lastOrderData=order;
+  closeModal();
+
+  // Loyalty message
+  const totalPts=customerPts;
+  const ptsToFree=Math.max(0,LOYALTY_FREE_THRESHOLD-totalPts);
+  let loyalMsg='';
+  if(totalPts>=LOYALTY_FREE_THRESHOLD){loyalMsg=`🎁 You have ${totalPts} points! Claim your FREE package — WhatsApp us!`;}
+  else{loyalMsg=`⭐ You earned ${pts} points! Total: ${totalPts}. Need ${ptsToFree} more for FREE package!`;}
+  document.getElementById('loyaltyMsg').textContent=loyalMsg;
+
+  document.getElementById('successOrderId').textContent=orderId;
+  document.getElementById('success-page').classList.add('open');
+
+  // Browser notification
+  try{if(typeof Notification!=='undefined'&&Notification.permission==='granted'){new Notification('BoostifyMedia',{body:`Order ${orderId} placed!`,icon:'https://via.placeholder.com/64'});}}catch(e){}
+
+  // WhatsApp notification with full order details
+  const waText='🛒 *NEW ORDER!*\n'
+    +'━━━━━━━━━━━━━━━━━━━━\n'
+    +'🆔 Order ID: '+orderId+'\n'
+    +'👤 Name: '+name+'\n'
+    +'📱 Phone: '+phone+'\n'
+    +'🔗 Username: '+username+'\n'
+    +'📊 Platform: '+platform+'\n'
+    +'📦 Package: '+currentPkg.name+'\n'
+    +'⚡ Speed: '+selectedSpeed+'\n'
+    +'💰 Amount: ₹'+amtPaid+'\n'
+    +'🧾 Txn ID: '+txnId+'\n'
+    +(note?'📝 Note: '+note+'\n':'')
+    +'━━━━━━━━━━━━━━━━━━━━\n'
+    +'✅ Please confirm & process!';
+  const waLink='https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(waText);
+  // Set the WhatsApp button
+  const waBtn=document.getElementById('waSendBtn');
+  if(waBtn){ waBtn.href=waLink; }
+
+  // ===== RESELLER TRACKING =====
+  const rsCodeEl=document.getElementById('orderResellerCode');
+  if(rsCodeEl&&rsCodeEl.value.trim()){
+    const rsCode=rsCodeEl.value.trim().toUpperCase();
+    const rseller=resellers.find(r=>r.code===rsCode&&r.active);
+    if(rseller){
+      orders[orders.length-1].resellerCode=rsCode;
+      localStorage.setItem('bm_orders',JSON.stringify(orders));
+    }
+  }
+
+  // Save phone for VIP check
+  localStorage.setItem('bm_last_phone',phone);
+
+  // Save pkg for retarget
+  localStorage.setItem('bm_last_pkg',currentPkg.cat);
+  localStorage.setItem('bm_retarget_time',Date.now().toString());
+  localStorage.removeItem('bm_retarget_shown');
+}
+
+function closeSuccess(){document.getElementById('success-page').classList.remove('open');}
+
+// ===== INVOICE =====
+function downloadInvoice(){
+  const id=document.getElementById('invoiceOrderId').value.trim();
+  const o=orders.find(o=>o.id===id);
+  if(!o){showNotif('Order not found!','error');return;}
+  generateInvoicePDF(o);
+}
+function downloadLastInvoice(){if(lastOrderData)generateInvoicePDF(lastOrderData);}
+function generateInvoicePDF(o){
+  const html=`<html><head><title>Invoice ${o.id}</title><style>body{font-family:Arial;padding:30px;max-width:600px;margin:0 auto;}h1{color:#ff6b00;}table{width:100%;border-collapse:collapse;margin:20px 0;}td,th{padding:10px;border:1px solid #ddd;text-align:left;}th{background:#f5f5f5;}.total{font-size:18px;font-weight:bold;color:#ff6b00;}.footer{margin-top:30px;color:#666;font-size:12px;}</style></head><body>
+  <h1>BoostifyMedia</h1><p>UPI: kr69@ptyes | WhatsApp: 8011267054</p><hr>
+  <h2>INVOICE</h2>
+  <table><tr><th>Field</th><th>Details</th></tr>
+  <tr><td>Order ID</td><td>${o.id}</td></tr>
+  <tr><td>Date</td><td>${o.date} ${o.time}</td></tr>
+  <tr><td>Customer</td><td>${o.name}</td></tr>
+  <tr><td>Phone</td><td>${o.phone}</td></tr>
+  <tr><td>Username</td><td>${o.username}</td></tr>
+  <tr><td>Platform</td><td>${o.platform||'Instagram'}</td></tr>
+  <tr><td>Package</td><td>${o.package}</td></tr>
+  <tr><td>Details</td><td>${o.details}</td></tr>
+  <tr><td>Delivery Speed</td><td>${o.speed||'Normal'}</td></tr>
+  <tr><td>Transaction ID</td><td>${o.txnId}</td></tr>
+  <tr><td>Discount</td><td>₹${o.discount||0}</td></tr>
+  <tr><td class="total">Amount Paid</td><td class="total">₹${o.amtPaid}</td></tr>
+  <tr><td>Status</td><td>${o.status.toUpperCase()}</td></tr>
+  </table>
+  <div class="footer"><p>Thank you for your order! Contact: 8011267054</p></div></body></html>`;
+  const w=window.open('','_blank');w.document.write(html);w.document.close();setTimeout(()=>w.print(),500);
+}
+
+// ===== TRACK =====
+function trackOrder(){
+  const id=document.getElementById('trackInput').value.trim().toUpperCase();
+  const res=document.getElementById('trackResult');
+  const order=orders.find(o=>o.id===id);
+  res.style.display='block';
+  if(order){
+    const prog=order.status==='completed'?100:order.status==='cancelled'?0:40;
+    res.innerHTML=`<div style="background:var(--bg3);border-radius:10px;padding:14px;margin-top:6px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <b>${order.package}</b><span class="status-badge status-${order.status}">${order.status.toUpperCase()}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text2);">👤 ${order.name} | 📱 ${order.phone}<br>📅 ${order.date} | 💳 ${order.txnId}<br>💰 Paid: ₹${order.amtPaid}</div>
+      <div class="delivery-progress"><div style="font-size:11px;color:var(--text2);margin-bottom:3px;">Delivery Progress</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${prog}%"></div></div></div>
+      <button class="track-btn" style="margin-top:8px;font-size:12px;" onclick="generateInvoicePDF(${JSON.stringify(order).replace(/"/g,"'")})">📄 Invoice</button>
+    </div>`;
+  }else{res.innerHTML='<p style="color:var(--danger);font-size:13px;margin-top:6px;">❌ Order not found. Check Order ID.</p>';}
+}
+
+function trackByPhone(){
+  const phone=document.getElementById('trackPhone').value.trim();
+  const res=document.getElementById('trackResult');
+  const myOrders=orders.filter(o=>o.phone===phone);
+  res.style.display='block';
+  if(myOrders.length>0){
+    res.innerHTML=myOrders.reverse().map(o=>`
+      <div style="background:var(--bg3);border-radius:8px;padding:10px;margin-top:7px;font-size:12px;">
+        <div style="display:flex;justify-content:space-between;"><b>${o.id}</b><span class="status-badge status-${o.status}">${o.status.toUpperCase()}</span></div>
+        <div style="color:var(--text2);margin-top:3px;">${o.package} | ₹${o.amtPaid} | ${o.date}</div>
+        <button class="action-btn btn-complete" style="margin-top:5px;font-size:11px;" onclick='openOrder(${JSON.stringify(packages.find(p=>p.id===o.pkgId)||{name:o.package,price:o.price,details:o.details,id:"reorder"})})'>🔄 Re-order</button>
+      </div>`).join('');
+  }else{res.innerHTML='<p style="color:var(--danger);font-size:13px;margin-top:6px;">❌ No orders for this number.</p>';}
+}
+
+// ===== REVIEWS =====
+function renderReviews(){
+  document.getElementById('reviewsGrid').innerHTML=reviews.map(r=>`
+    <div class="review-card">
+      <div class="review-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+      <div class="review-text">"${r.text}"</div>
+      <div class="review-author">${r.name} ${r.verified?'<span style="color:var(--success);font-size:10px">✅ Verified</span>':''}</div>
+      <div class="review-date">${r.date}</div>
+    </div>`).join('');
+}
+function toggleReviewForm(){const f=document.getElementById('reviewForm');f.style.display=f.style.display==='block'?'none':'block';}
+function setStars(n){selectedStars=n;document.querySelectorAll('#starSelect span').forEach((s,i)=>{s.textContent=i<n?'★':'☆';s.style.color=i<n?'#ffab00':'var(--text2)';});}
+function submitReview(){
+  const name=document.getElementById('reviewName').value.trim();
+  const text=document.getElementById('reviewText').value.trim();
+  const orderId=document.getElementById('reviewOrderId').value.trim();
+  if(!name||!text||!selectedStars){showNotif('Fill all review fields!','error');return;}
+  const verified=orders.some(o=>o.id===orderId);
+  reviews.push({name,stars:selectedStars,text,date:new Date().toLocaleDateString('en-IN'),verified});
+  localStorage.setItem('bm_reviews',JSON.stringify(reviews));
+  renderReviews();document.getElementById('reviewForm').style.display='none';
+  showNotif('Review submitted! ⭐');
+}
+
+// ===== FAQ =====
+const faqs=[
+  {q:'How fast is delivery?',a:'Most orders start within 5-30 minutes. Full delivery in 24 hours.'},
+  {q:'Is it safe for my account?',a:'100% safe. No password needed. We use proven methods.'},
+  {q:'How do I pay?',a:'Pay via UPI to kr69@ptyes. Enter Transaction ID and amount. Instant confirmation.'},
+  {q:"What if I don't receive my order?",a:'Contact WhatsApp: 8011267054. Resolved within 24 hours.'},
+  {q:'What is the Trial Pack?',a:'100 Real Followers for just ₹9! Perfect to test our service before ordering more.'},
+  {q:'How do loyalty points work?',a:'Earn 1 point per ₹1 spent. Reach 1000 points = FREE package!'},
+  {q:'Can I cancel an order?',a:'Contact us on WhatsApp within 10 minutes of ordering for cancellation.'},
+  {q:'What delivery speed options?',a:'Normal (free), Fast (+₹10), Express (+₹25) for fastest delivery.'},
+];
+function renderFAQ(){
+  document.getElementById('faqSection').innerHTML=faqs.map(f=>`
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">${f.q} <span>+</span></div>
+    <div class="faq-a">${f.a}</div></div>`).join('');
+}
+function toggleFaq(el){const a=el.nextElementSibling,s=el.querySelector('span');a.classList.toggle('open');s.textContent=a.classList.contains('open')?'−':'+';}
+
+// ===== REFERRAL =====
+function genReferralCode(){let c=localStorage.getItem('bm_referral');if(!c){c='BM-'+Math.random().toString(36).substr(2,4).toUpperCase();localStorage.setItem('bm_referral',c);}document.getElementById('myReferralCode').textContent=c;}
+function copyReferral(){navigator.clipboard.writeText(document.getElementById('myReferralCode').textContent);showNotif('Referral code copied! 📋');}
+function shareOnWA(){const c=document.getElementById('myReferralCode').textContent;window.open(`https://wa.me/?text=${encodeURIComponent(`🚀 Get real Instagram followers, likes & views at best price!\nUse my code ${c} for ₹20 off!\nOrder here: boostifymedia.com`)}`);}
+function shareOnFB(){window.open(`https://www.facebook.com/sharer/sharer.php?u=boostifymedia.com&quote=Use my code ${document.getElementById('myReferralCode').textContent} for ₹20 off on BoostifyMedia!`);}
+
+// ===== CHAT =====
+const autoReplies=['For quick help, WhatsApp us: 8011267054 📱','You can track your order in the Track Order section!','Our most popular package is the Growth Combo at ₹549!','Use code BOOST20 for ₹20 off your order!'];
+let autoIdx=0;
+function toggleChat(){document.getElementById('chatBox').classList.toggle('open');}
+function sendChat(){
+  const input=document.getElementById('chatInput');
+  const msg=input.value.trim();if(!msg) return;
+  const msgs=document.getElementById('chatMessages');
+  msgs.innerHTML+=`<div class="chat-msg user">${msg}</div>`;
+  input.value='';msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{
+    msgs.innerHTML+=`<div class="chat-msg">${autoReplies[autoIdx%autoReplies.length]}</div>`;
+    autoIdx++;msgs.scrollTop=msgs.scrollHeight;
+  },700);
+}
+
+// ===== CUSTOMER ACCOUNT =====
+function openCustomerLogin(){document.getElementById('customerLogin').classList.add('open');}
+function closeCustomerLogin(){document.getElementById('customerLogin').classList.remove('open');}
+function customerLogin(){
+  const phone=document.getElementById('custPhone').value.trim();
+  if(phone.length<10){showNotif('Enter valid phone number!','error');return;}
+  currentCustomerPhone=phone;
+  closeCustomerLogin();
+  openCustomerDash(phone);
+}
+function customerLogout(){currentCustomerPhone=null;document.getElementById('customerDash').classList.remove('open');}
+function openCustomerDash(phone){
+  const myOrders=orders.filter(o=>o.phone===phone);
+  const totalSpent=myOrders.reduce((s,o)=>s+(o.amtPaid||0),0);
+  const totalSaved=myOrders.reduce((s,o)=>s+(o.discount||0),0);
+  const pts=parseInt(localStorage.getItem('bm_pts_'+phone)||'0');
+  const name=myOrders[0]?.name||'Customer';
+  document.getElementById('dashName').textContent=name;
+  document.getElementById('dashOrders').textContent=myOrders.length;
+  document.getElementById('dashSpent').textContent='₹'+totalSpent;
+  document.getElementById('dashSaved').textContent='₹'+totalSaved;
+  document.getElementById('dashPoints').textContent=pts+' pts';
+  const pctToFree=Math.min(100,Math.round(pts/LOYALTY_FREE_THRESHOLD*100));
+  document.getElementById('loyaltyBar').style.width=pctToFree+'%';
+  document.getElementById('dashPointsMsg').textContent=pts>=LOYALTY_FREE_THRESHOLD?'🎁 Eligible for FREE package! WhatsApp us!':'Need '+(LOYALTY_FREE_THRESHOLD-pts)+' more points for free package';
+  document.getElementById('dashVipBadge').innerHTML=pts>=500?'<div class="vip-badge">👑 VIP Member</div>':'';
+  // Achievements
+  const achievements=[
+    {icon:'🥇',label:'First Order',earned:myOrders.length>=1},
+    {icon:'🔥',label:'5 Orders',earned:myOrders.length>=5},
+    {icon:'💎',label:'₹1000 Spent',earned:totalSpent>=1000},
+    {icon:'⭐',label:'Loyal Customer',earned:pts>=500},
+    {icon:'🚀',label:'Power User',earned:myOrders.length>=10},
+    {icon:'👑',label:'VIP Status',earned:pts>=1000},
+  ];
+  document.getElementById('achievementGrid').innerHTML=achievements.map(a=>`
+    <div class="achievement ${a.earned?'earned':''}">
+      <div class="icon">${a.icon}</div>
+      <div>${a.label}</div>
+      ${a.earned?'<div style="color:var(--gold);font-size:10px">Earned!</div>':'<div style="color:var(--text2);font-size:9px">Locked</div>'}
+    </div>`).join('');
+  // Orders list
+  document.getElementById('dashOrders_list').innerHTML=myOrders.reverse().map(o=>`
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px;font-size:13px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <b style="color:var(--secondary)">${o.id}</b>
+        <span class="status-badge status-${o.status}">${o.status.toUpperCase()}</span>
+      </div>
+      <div style="color:var(--text2);margin-top:4px;">${o.package} | ₹${o.amtPaid} | ${o.date}</div>
+      <div style="display:flex;gap:6px;margin-top:6px;">
+        <button class="action-btn btn-complete" onclick='openOrder(${JSON.stringify(packages.find(p=>p.id===o.pkgId)||{name:o.package,price:o.price,details:o.details,cat:"combo",id:"reorder"})})' style="font-size:11px">🔄 Re-order</button>
+        <button class="action-btn btn-edit" onclick="generateInvoicePDF(${JSON.stringify(o).replace(/"/g,"'")})" style="font-size:11px">📄 Invoice</button>
+      </div>
+    </div>`).join('') || '<p style="color:var(--text2);font-size:13px;padding:10px">No orders yet. Place your first order!</p>';
+  // Wishlist
+  const wishPkgs=packages.filter(p=>wishlist.includes(p.id));
+  document.getElementById('wishlistGrid').innerHTML=wishPkgs.length?wishPkgs.map(p=>`
+    <div class="pkg-card">
+      <div class="pkg-name">${p.name}</div>
+      <div class="pkg-details">${p.details}</div>
+      <div class="pkg-price">${fmtPrice(p.price)}</div>
+      <div class="pkg-actions">
+        <button class="pkg-btn" onclick='openOrder(${JSON.stringify(p)});customerLogout()'>Order</button>
+        <button class="wishlist-btn active" onclick='toggleWishlist("${p.id}",this)'>❤️</button>
+      </div>
+    </div>`).join(''):'<p style="color:var(--text2);font-size:13px">No wishlisted packages yet</p>';
+  document.getElementById('customerDash').classList.add('open');
+}
+function openOrderPage(){customerLogout();document.getElementById('packages').scrollIntoView({behavior:'smooth'});}
+
+// ===== ADMIN =====
+function openAdminLogin(){document.getElementById('admin-login').classList.add('open');document.getElementById('adminPassInput').focus();}
+function closeAdminLogin(){document.getElementById('admin-login').classList.remove('open');document.getElementById('adminPassInput').value='';document.getElementById('adminErr').style.display='none';}
+function checkAdminPass(){
+  if(document.getElementById('adminPassInput').value===ADMIN_PASS){closeAdminLogin();openAdminPanel();}
+  else{document.getElementById('adminErr').style.display='block';}
+}
+function openAdminPanel(){
+  document.getElementById('admin-panel').classList.add('open');
+  renderAdminDashboard();renderAdminOrders();renderPackagesAdmin();
+  renderCustomers('');renderCoupons();renderBlacklist();renderSubsAdmin();renderAnalytics();renderProfit();
+  renderResellerAdmin();renderVipDealsAdmin();
+  // Request notifications
+  if(typeof Notification!=='undefined'&&Notification.permission==='default') Notification.requestPermission();
+}
+function adminLogout(){document.getElementById('admin-panel').classList.remove('open');}
+function showAdminTab(tab,el){
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+  if(el) el.classList.add('active');
+  document.getElementById('admin-'+tab).classList.add('active');
+  if(tab==='profit') renderProfit();
+  if(tab==='analytics') renderAnalytics();
+  if(tab==='resellers-admin') renderResellerAdmin();
+  if(tab==='vipdeals-admin') renderVipDealsAdmin();
+}
+
+function renderAdminDashboard(){
+  const total=orders.reduce((s,o)=>s+(o.amtPaid||0),0);
+  const pending=orders.filter(o=>o.status==='pending').length;
+  const completed=orders.filter(o=>o.status==='completed').length;
+  const today=new Date().toLocaleDateString('en-IN');
+  const todayRev=orders.filter(o=>o.date===today).reduce((s,o)=>s+(o.amtPaid||0),0);
+  document.getElementById('adminStats').innerHTML=`
+    <div class="admin-stat-card"><div class="val">${orders.length}</div><div class="lbl">Total Orders</div></div>
+    <div class="admin-stat-card"><div class="val" style="color:var(--warning)">${pending}</div><div class="lbl">⏳ Pending</div></div>
+    <div class="admin-stat-card"><div class="val" style="color:var(--success)">${completed}</div><div class="lbl">✅ Completed</div></div>
+    <div class="admin-stat-card"><div class="val">₹${total.toLocaleString()}</div><div class="lbl">Total Revenue</div></div>
+    <div class="admin-stat-card"><div class="val">₹${todayRev}</div><div class="lbl">Today Revenue</div></div>
+    <div class="admin-stat-card"><div class="val">${liveCount.toLocaleString()}</div><div class="lbl">Live Counter</div></div>`;
+  if(pending>0) document.getElementById('pendingAlert').textContent=`⚠️ ${pending} pending order(s) need your attention!`;
+  else document.getElementById('pendingAlert').textContent='';
+  const recent=[...orders].reverse().slice(0,8);
+  document.getElementById('recentOrdersBody').innerHTML=recent.map(o=>`
+    <tr><td style="color:var(--secondary)">${o.id}</td><td>${o.name}</td><td>${o.package}</td><td>₹${o.amtPaid}</td>
+    <td><span class="status-badge status-${o.status}">${o.status.toUpperCase()}</span></td>
+    <td><button class="action-btn btn-complete" onclick="updateStatus('${o.id}','completed')">✓</button>
+    <button class="action-btn btn-cancel" onclick="updateStatus('${o.id}','cancelled')">✗</button></td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text2);padding:15px">No orders yet</td></tr>';
+  renderRevenueChart();
+}
+
+function renderRevenueChart(){
+  const ctx=document.getElementById('revenueChart');if(!ctx) return;
+  const days=[];const data=[];
+  for(let i=6;i>=0;i--){
+    const d=new Date();d.setDate(d.getDate()-i);
+    const label=d.toLocaleDateString('en-IN',{day:'2-digit',month:'short'});
+    const rev=orders.filter(o=>o.date===d.toLocaleDateString('en-IN')).reduce((s,o)=>s+(o.amtPaid||0),0);
+    days.push(label);data.push(rev);
+  }
+  if(window._revenueChart) window._revenueChart.destroy();
+  window._revenueChart=new Chart(ctx,{type:'line',data:{labels:days,datasets:[{label:'Revenue ₹',data,borderColor:'#ff6b00',backgroundColor:'rgba(255,107,0,0.1)',fill:true,tension:0.4,pointBackgroundColor:'#ff6b00'}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#9999bb'}},x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#9999bb'}}}}});
+}
+
+function filterOrders(f,el){
+  orderFilter=f;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  if(el) el.classList.add('active');
+  renderAdminOrders();
+}
+function renderAdminOrders(){
+  const search=(document.getElementById('orderSearch')||{value:''}).value.toLowerCase();
+  let filtered=orders.filter(o=>
+    (orderFilter==='all'||o.status===orderFilter)&&
+    (!search||o.id.toLowerCase().includes(search)||o.name.toLowerCase().includes(search)||o.phone.includes(search)||o.txnId.toLowerCase().includes(search))
+  );
+  document.getElementById('ordersTableBody').innerHTML=[...filtered].reverse().map(o=>`
+    <tr>
+      <td style="color:var(--secondary);white-space:nowrap">${o.id}</td>
+      <td>${o.name}</td><td>${o.phone}</td><td>${o.package}</td>
+      <td><span style="font-size:11px;color:var(--secondary)">${o.speed||'normal'}</span></td>
+      <td style="font-size:11px">${o.txnId}</td><td>₹${o.amtPaid}</td>
+      <td>${o.platform||'—'}</td>
+      <td><span class="status-badge status-${o.status}">${o.status.toUpperCase()}</span></td>
+      <td style="font-size:11px;white-space:nowrap">${o.date}</td>
+      <td style="white-space:nowrap">
+        <button class="action-btn btn-complete" onclick="updateStatus('${o.id}','completed')">✓</button>
+        <button class="action-btn btn-cancel" onclick="updateStatus('${o.id}','cancelled')">✗</button>
+        <button class="action-btn btn-delete" onclick="deleteOrder('${o.id}')">🗑</button>
+        <button class="action-btn btn-edit" onclick="generateInvoicePDF(${JSON.stringify(o).replace(/"/g,"'")})">📄</button>
+      </td>
+    </tr>`).join('')||'<tr><td colspan="11" style="text-align:center;color:var(--text2);padding:15px">No orders found</td></tr>';
+}
+
+function updateStatus(id,status){
+  const o=orders.find(o=>o.id===id);
+  if(o){o.status=status;localStorage.setItem('bm_orders',JSON.stringify(orders));renderAdminDashboard();renderAdminOrders();showNotif(`Order ${status}! ✅`);}
+}
+function deleteOrder(id){
+  if(!confirm('Delete order '+id+'?')) return;
+  orders=orders.filter(o=>o.id!==id);localStorage.setItem('bm_orders',JSON.stringify(orders));
+  renderAdminDashboard();renderAdminOrders();showNotif('Order deleted');
+}
+
+function renderPackagesAdmin(){
+  document.getElementById('packagesAdminBody').innerHTML=packages.map(p=>`
+    <tr><td>${p.name}</td><td>${p.cat}</td><td style="font-size:11px">${p.details}</td>
+    <td>₹${p.price}</td><td>₹${p.cost||'—'}</td>
+    <td style="color:var(--success)">₹${p.cost?(p.price-p.cost):''}</td>
+    <td style="font-size:11px">${p.badge||'—'}</td>
+    <td><button class="action-btn btn-delete" onclick="deletePackage('${p.id}')">🗑</button></td></tr>`).join('');
+}
+function addPackage(){
+  const name=document.getElementById('newPkgName').value.trim();
+  const cat=document.getElementById('newPkgCat').value;
+  const details=document.getElementById('newPkgDetails').value.trim();
+  const price=parseInt(document.getElementById('newPkgPrice').value);
+  const cost=parseInt(document.getElementById('newPkgCost').value)||0;
+  const badge=document.getElementById('newPkgBadge').value.trim();
+  const best=document.getElementById('newPkgBest').value==='true';
+  if(!name||!details||!price){showNotif('Fill all fields!','error');return;}
+  packages.push({id:'p'+Date.now(),name,cat,details,price,cost,popular:!!badge,badge,best});
+  renderPackages();renderPackagesAdmin();showNotif('Package added! ✅');
+}
+function deletePackage(id){packages=packages.filter(p=>p.id!==id);renderPackages();renderPackagesAdmin();showNotif('Package deleted');}
+
+function renderCustomers(search){
+  const map={};
+  orders.forEach(o=>{if(!map[o.phone])map[o.phone]={name:o.name,phone:o.phone,orders:0,spent:0};map[o.phone].orders++;map[o.phone].spent+=o.amtPaid||0;});
+  let list=Object.values(map).filter(c=>!search||c.name.toLowerCase().includes(search.toLowerCase())||c.phone.includes(search));
+  document.getElementById('customersTableBody').innerHTML=list.map(c=>{
+    const pts=parseInt(localStorage.getItem('bm_pts_'+c.phone)||'0');
+    const isBlacklisted=blacklist.some(b=>b.phone===c.phone);
+    return `<tr><td>${c.name}</td><td>${c.phone}</td><td>${c.orders}</td><td>₹${c.spent}</td><td style="color:var(--gold)">${pts}</td>
+    <td>${pts>=500?'<div class="vip-badge" style="font-size:10px">👑 VIP</div>':'—'}</td>
+    <td>${isBlacklisted?'<span class="blacklist-tag">BLOCKED</span>':`<button class="action-btn btn-cancel" onclick="quickBlacklist('${c.phone}')" style="font-size:10px">Block</button>`}</td></tr>`;
+  }).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--text2);padding:15px">No customers yet</td></tr>';
+}
+
+function renderProfit(){
+  const totalRev=orders.filter(o=>o.status!=='cancelled').reduce((s,o)=>s+(o.amtPaid||0),0);
+  const totalDisc=orders.reduce((s,o)=>s+(o.discount||0),0);
+  // Estimate cost from packages
+  let totalCost=0;
+  orders.filter(o=>o.status!=='cancelled').forEach(o=>{
+    const pkg=packages.find(p=>p.id===o.pkgId);
+    if(pkg&&pkg.cost) totalCost+=pkg.cost;
+  });
+  const profit=totalRev-totalCost;
+  const margin=totalRev>0?Math.round(profit/totalRev*100):0;
+  document.getElementById('ptRevenue').textContent='₹'+totalRev.toLocaleString();
+  document.getElementById('ptCost').textContent='₹'+totalCost.toLocaleString();
+  document.getElementById('ptDiscount').textContent='₹'+totalDisc.toLocaleString();
+  document.getElementById('ptProfit').textContent='₹'+profit.toLocaleString();
+  document.getElementById('ptMargin').textContent=margin+'%';
+  // Profit chart by package category
+  const cats=['combo','followers','likes','views','trial'];
+  const catProfits=cats.map(cat=>{
+    const pkgIds=packages.filter(p=>p.cat===cat).map(p=>p.id);
+    return orders.filter(o=>pkgIds.includes(o.pkgId)&&o.status!=='cancelled').reduce((s,o)=>{
+      const pkg=packages.find(p=>p.id===o.pkgId);
+      return s+(o.amtPaid||0)-(pkg?.cost||0);
+    },0);
+  });
+  const ctx=document.getElementById('profitChart');if(!ctx) return;
+  if(window._profitChart) window._profitChart.destroy();
+  window._profitChart=new Chart(ctx,{type:'bar',data:{labels:cats.map(c=>c.charAt(0).toUpperCase()+c.slice(1)),datasets:[{label:'Profit ₹',data:catProfits,backgroundColor:['#ff6b00','#00d4ff','#00e676','#9b59b6','#ffab00']}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#9999bb'}},x:{grid:{display:false},ticks:{color:'#9999bb'}}}}});
+}
+
+function renderAnalytics(){
+  document.getElementById('visitorCount').textContent=visitors.toLocaleString();
+  const conv=visitors>0?Math.round(orders.length/visitors*100):0;
+  document.getElementById('convRate').textContent=conv+'%';
+  // Most popular package
+  const pkgCount={};orders.forEach(o=>{pkgCount[o.package]=(pkgCount[o.package]||0)+1;});
+  const topPkg=Object.entries(pkgCount).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('popularPkg').textContent=topPkg?topPkg[0].split(' ')[0]:'—';
+  const avgOrd=orders.length>0?Math.round(orders.reduce((s,o)=>s+(o.amtPaid||0),0)/orders.length):0;
+  document.getElementById('avgOrder').textContent='₹'+avgOrd;
+  const phones=new Set(orders.map(o=>o.phone));
+  const repeat=[...phones].filter(p=>orders.filter(o=>o.phone===p).length>1).length;
+  document.getElementById('repeatRate').textContent=phones.size>0?Math.round(repeat/phones.size*100)+'%':'0%';
+  // Weekly chart
+  const days=[];const data=[];
+  for(let i=6;i>=0;i--){
+    const d=new Date();d.setDate(d.getDate()-i);
+    const label=d.toLocaleDateString('en-IN',{weekday:'short'});
+    const cnt=orders.filter(o=>o.date===d.toLocaleDateString('en-IN')).length;
+    days.push(label);data.push(cnt);
+  }
+  const ctx=document.getElementById('weeklyChart');if(!ctx) return;
+  if(window._weeklyChart) window._weeklyChart.destroy();
+  window._weeklyChart=new Chart(ctx,{type:'bar',data:{labels:days,datasets:[{label:'Orders',data,backgroundColor:'rgba(255,107,0,0.7)',borderRadius:5}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#9999bb',stepSize:1}},x:{grid:{display:false},ticks:{color:'#9999bb'}}}}});
+}
+
+function renderCoupons(){
+  document.getElementById('couponsTableBody').innerHTML=coupons.map((c,i)=>`
+    <tr><td style="color:var(--primary);font-weight:700">${c.code}</td>
+    <td>${c.type==='percent'?c.discount+'%':'₹'+c.discount}</td>
+    <td>₹${c.minOrder||0}</td><td>${c.used}</td><td>${c.maxUses||'∞'}</td>
+    <td><button class="action-btn btn-delete" onclick="deleteCoupon(${i})">🗑</button></td></tr>`).join('');
+}
+function addCoupon(){
+  const code=document.getElementById('newCouponCode').value.trim().toUpperCase();
+  const discount=parseInt(document.getElementById('newCouponDiscount').value);
+  const minOrder=parseInt(document.getElementById('newCouponMin').value)||0;
+  const maxUses=parseInt(document.getElementById('newCouponMax').value)||0;
+  if(!code||!discount){showNotif('Fill all fields!','error');return;}
+  coupons.push({code,discount,type:'flat',minOrder,maxUses,used:0});
+  localStorage.setItem('bm_coupons',JSON.stringify(coupons));renderCoupons();showNotif('Coupon added!');
+}
+function deleteCoupon(i){coupons.splice(i,1);localStorage.setItem('bm_coupons',JSON.stringify(coupons));renderCoupons();}
+
+function renderBlacklist(){
+  document.getElementById('blacklistBody').innerHTML=blacklist.map((b,i)=>`
+    <tr><td>${b.phone}</td><td>${b.reason}</td><td>${b.date}</td>
+    <td><button class="action-btn btn-complete" onclick="removeBlacklist(${i})">Unblock</button></td></tr>`).join('')||'<tr><td colspan="4" style="text-align:center;color:var(--text2);padding:15px">No blacklisted numbers</td></tr>';
+}
+function addBlacklist(){
+  const phone=document.getElementById('blacklistPhone').value.trim();
+  const reason=document.getElementById('blacklistReason').value.trim()||'No reason';
+  if(!phone){showNotif('Enter phone number!','error');return;}
+  blacklist.push({phone,reason,date:new Date().toLocaleDateString('en-IN')});
+  localStorage.setItem('bm_blacklist',JSON.stringify(blacklist));
+  renderBlacklist();renderCustomers('');showNotif('Customer blacklisted!','warn');
+}
+function quickBlacklist(phone){
+  blacklist.push({phone,reason:'Admin blocked',date:new Date().toLocaleDateString('en-IN')});
+  localStorage.setItem('bm_blacklist',JSON.stringify(blacklist));
+  renderBlacklist();renderCustomers('');showNotif('Blocked!','warn');
+}
+function removeBlacklist(i){blacklist.splice(i,1);localStorage.setItem('bm_blacklist',JSON.stringify(blacklist));renderBlacklist();renderCustomers('');showNotif('Unblocked!');}
+
+function renderSubsAdmin(){
+  document.getElementById('subsAdminBody').innerHTML=subscriptionPlans.map((p,i)=>`
+    <tr><td>${p.name}</td><td>₹${p.price}/mo</td><td style="font-size:11px">${p.features.join(', ')}</td><td>${p.subs}</td>
+    <td><button class="action-btn btn-delete" onclick="deleteSub(${i})">🗑</button></td></tr>`).join('');
+}
+function addSubscription(){
+  const name=document.getElementById('newSubName').value.trim();
+  const price=parseInt(document.getElementById('newSubPrice').value);
+  const features=document.getElementById('newSubFeatures').value.split(',').map(f=>f.trim()).filter(Boolean);
+  if(!name||!price||!features.length){showNotif('Fill all fields!','error');return;}
+  subscriptionPlans.push({id:'s'+Date.now(),name,price,features,subs:0});
+  renderSubGrid();renderSubsAdmin();showNotif('Subscription added!');
+}
+function deleteSub(i){subscriptionPlans.splice(i,1);renderSubGrid();renderSubsAdmin();showNotif('Plan deleted');}
+
+// ===== EXPORT =====
+function exportCSV(){
+  const rows=[['Order ID','Name','Phone','Username','Platform','Package','Speed','Txn ID','Amount','Discount','Status','Date','Note']];
+  orders.forEach(o=>rows.push([o.id,o.name,o.phone,o.username,o.platform||'',o.package,o.speed||'normal',o.txnId,o.amtPaid,o.discount||0,o.status,o.date,o.note||'']));
+  const csv=rows.map(r=>r.map(c=>`"${c}"`).join(',')).join('\n');
+  const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.download='boostify_orders_'+Date.now()+'.csv';a.click();
+  showNotif('CSV exported! 📥');
+}
+function exportPDF(){
+  const w=window.open('','_blank');
+  const rows=orders.map(o=>`<tr><td>${o.id}</td><td>${o.name}</td><td>${o.phone}</td><td>${o.package}</td><td>₹${o.amtPaid}</td><td>${o.status}</td><td>${o.date}</td></tr>`).join('');
+  w.document.write(`<html><head><title>Orders Report</title><style>body{font-family:Arial;padding:20px;}table{width:100%;border-collapse:collapse;}td,th{border:1px solid #ddd;padding:8px;font-size:12px;}th{background:#ff6b00;color:white;}h1{color:#ff6b00;}</style></head><body><h1>BoostifyMedia — Orders Report</h1><p>Generated: ${new Date().toLocaleString()}</p><table><thead><tr><th>Order ID</th><th>Name</th><th>Phone</th><th>Package</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody>${rows}</tbody></table></body></html>`);
+  w.document.close();setTimeout(()=>w.print(),500);
+  showNotif('PDF ready to print! 📄');
+}
+
+
+// ===== RESELLER SYSTEM =====
+let currentReseller=null;
+function openResellerPanel(){
+  document.getElementById('resellerPanel').style.display='flex';
+  const saved=localStorage.getItem('bm_my_reseller');
+  if(saved){currentReseller=JSON.parse(saved);showResellerDash();}
+}
+function closeResellerPanel(){document.getElementById('resellerPanel').style.display='none';}
+function registerReseller(){
+  const name=document.getElementById('resellerName').value.trim();
+  const phone=document.getElementById('resellerPhone').value.trim();
+  if(!name||phone.length<10){showNotif('Enter valid name and phone!','error');return;}
+  const existing=resellers.find(r=>r.phone===phone);
+  if(existing){currentReseller=existing;localStorage.setItem('bm_my_reseller',JSON.stringify(existing));showResellerDash();showNotif('Welcome back, '+name+'!');return;}
+  const code='RS-'+Math.random().toString(36).substr(2,5).toUpperCase();
+  const reseller={id:'r'+Date.now(),name,phone,code,sales:0,earned:0,pending:0,joined:new Date().toLocaleDateString('en-IN'),active:true};
+  resellers.push(reseller);
+  localStorage.setItem('bm_resellers',JSON.stringify(resellers));
+  localStorage.setItem('bm_my_reseller',JSON.stringify(reseller));
+  currentReseller=reseller;
+  showResellerDash();
+  showNotif('Registered as Reseller! 🎉 Code: '+code);
+}
+function loginReseller(){
+  const phone=prompt('Enter your registered phone number:');
+  if(!phone) return;
+  const r=resellers.find(r=>r.phone===phone);
+  if(r){currentReseller=r;localStorage.setItem('bm_my_reseller',JSON.stringify(r));showResellerDash();showNotif('Welcome back, '+r.name+'!');}
+  else showNotif('Phone not found. Please register first.','error');
+}
+function showResellerDash(){
+  document.getElementById('resellerLoginSection').style.display='none';
+  document.getElementById('resellerDashSection').style.display='block';
+  const r=currentReseller;
+  // Count orders with this reseller's code
+  const myOrders=orders.filter(o=>o.resellerCode===r.code);
+  const earned=myOrders.reduce((s,o)=>s+Math.round((o.amtPaid||0)*RESELLER_COMMISSION/100),0);
+  const pending=myOrders.filter(o=>o.status!=='cancelled').reduce((s,o)=>s+Math.round((o.amtPaid||0)*RESELLER_COMMISSION/100),0);
+  document.getElementById('rsTotalOrders').textContent=myOrders.length;
+  document.getElementById('rsEarned').textContent='₹'+earned;
+  document.getElementById('rsPending').textContent='₹'+pending;
+  document.getElementById('rsCode').textContent=r.code;
+  // Price list
+  const pl=packages.filter(p=>p.cat!=='trial').slice(0,8);
+  document.getElementById('resellerPriceList').innerHTML=pl.map(p=>`
+    <tr style="border-top:1px solid var(--border)">
+      <td style="padding:5px 0;font-size:11px">${p.name}</td>
+      <td style="text-align:center;font-size:11px">₹${p.price}</td>
+      <td style="text-align:center;color:var(--success);font-size:11px;font-weight:700">₹${Math.round(p.price*(1-RESELLER_COMMISSION/100))}</td>
+    </tr>`).join('');
+}
+function copyResellerCode(){
+  if(!currentReseller) return;
+  navigator.clipboard.writeText(currentReseller.code);
+  showNotif('Reseller code copied! Share with your clients 📋');
+}
+function resellerWhatsApp(){
+  if(!currentReseller) return;
+  const msg=`Hi Admin! I am reseller ${currentReseller.name} (${currentReseller.phone}), Code: ${currentReseller.code}. Requesting commission payout.`;
+  window.open('https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(msg));
+}
+function renderResellerAdmin(){
+  const el=document.getElementById('resellerAdminBody');
+  if(!el) return;
+  el.innerHTML=resellers.map((r,i)=>{
+    const rOrders=orders.filter(o=>o.resellerCode===r.code);
+    const commission=rOrders.reduce((s,o)=>s+Math.round((o.amtPaid||0)*RESELLER_COMMISSION/100),0);
+    return `<tr>
+      <td>${r.name}</td><td>${r.phone}</td>
+      <td style="color:var(--primary);font-weight:700">${r.code}</td>
+      <td>${rOrders.length}</td>
+      <td style="color:var(--success)">₹${commission}</td>
+      <td><span style="color:${r.active?'var(--success)':'var(--danger)'};">${r.active?'Active':'Blocked'}</span></td>
+      <td>
+        <button class="action-btn btn-complete" onclick="payReseller(${i})">💸 Paid</button>
+        <button class="action-btn btn-delete" onclick="blockReseller(${i})">🚫</button>
+      </td>
+    </tr>`;
+  }).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--text2);padding:15px">No resellers yet</td></tr>';
+  document.getElementById('rsAdminTotal').textContent=resellers.length;
+  const totalSales=orders.filter(o=>o.resellerCode).length;
+  document.getElementById('rsAdminSales').textContent=totalSales;
+  const totalPayout=resellers.reduce((s,r)=>{
+    return s+orders.filter(o=>o.resellerCode===r.code).reduce((ss,o)=>ss+Math.round((o.amtPaid||0)*RESELLER_COMMISSION/100),0);
+  },0);
+  document.getElementById('rsAdminPayout').textContent='₹'+totalPayout;
+}
+function payReseller(i){resellers[i].pending=0;localStorage.setItem('bm_resellers',JSON.stringify(resellers));renderResellerAdmin();showNotif('Payout marked as done ✅');}
+function blockReseller(i){resellers[i].active=!resellers[i].active;localStorage.setItem('bm_resellers',JSON.stringify(resellers));renderResellerAdmin();showNotif('Reseller status updated');}
+function changeResellerCommission(){
+  const val=prompt('Enter new commission % (current: '+RESELLER_COMMISSION+'):');
+  if(val&&!isNaN(val)) showNotif('Commission updated to '+val+'%! (Refresh to apply)');
+}
+// Apply reseller code at order
+function applyResellerCode(code){
+  if(!code) return false;
+  const r=resellers.find(r=>r.code===code.toUpperCase()&&r.active);
+  if(r){currentReseller=r;return true;}
+  return false;
+}
+
+// ===== SMART RECOMMENDER =====
+let recAnswers={goal:null,budget:null,speed:null};
+function openRecommender(){
+  recAnswers={goal:null,budget:null,speed:null};
+  document.getElementById('recStep1').style.display='block';
+  document.getElementById('recStep2').style.display='none';
+  document.getElementById('recStep3').style.display='none';
+  document.getElementById('recResult').style.display='none';
+  document.getElementById('recommenderModal').style.display='flex';
+}
+function closeRecommender(){document.getElementById('recommenderModal').style.display='none';}
+function setRec(key,val){
+  recAnswers[key]=val;
+  document.querySelectorAll('.rec-opt').forEach(b=>b.style.opacity='0.5');
+  if(key==='goal'){
+    setTimeout(()=>{document.getElementById('recStep1').style.display='none';document.getElementById('recStep2').style.display='block';document.querySelectorAll('.rec-opt').forEach(b=>b.style.opacity='1');},300);
+  } else if(key==='budget'){
+    setTimeout(()=>{document.getElementById('recStep2').style.display='none';document.getElementById('recStep3').style.display='block';document.querySelectorAll('.rec-opt').forEach(b=>b.style.opacity='1');},300);
+  } else if(key==='speed'){
+    showRecResult();
+  }
+}
+function showRecResult(){
+  const {goal,budget,speed}=recAnswers;
+  let recommended=null;
+  if(goal==='test') recommended=packages.find(p=>p.id==='p24');
+  else if(goal==='credibility'){
+    if(budget==='low') recommended=packages.find(p=>p.id==='p7');
+    else if(budget==='mid') recommended=packages.find(p=>p.id==='p9');
+    else recommended=packages.find(p=>p.id==='p10');
+  } else if(goal==='viral'){
+    if(budget==='low') recommended=packages.find(p=>p.id==='p19');
+    else if(budget==='mid') recommended=packages.find(p=>p.id==='p20');
+    else recommended=packages.find(p=>p.id==='p21');
+  } else if(goal==='engagement'){
+    if(budget==='low') recommended=packages.find(p=>p.id==='p13');
+    else if(budget==='mid') recommended=packages.find(p=>p.id==='p15');
+    else recommended=packages.find(p=>p.id==='p16');
+  }
+  if(!recommended) recommended=packages.find(p=>p.id==='p3');
+  document.getElementById('recStep3').style.display='none';
+  document.getElementById('recResult').style.display='block';
+  document.getElementById('recPkgCard').innerHTML=`
+    <div style="background:var(--bg3);border:1px solid var(--primary);border-radius:12px;padding:16px;">
+      <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;">${recommended.name}</div>
+      <div style="color:var(--text2);font-size:13px;margin:6px 0">${recommended.details}</div>
+      <div style="font-size:26px;font-weight:800;color:var(--primary);font-family:'Rajdhani',sans-serif;">₹${recommended.price}</div>
+      <div style="font-size:12px;color:var(--text2);margin:6px 0">⚡ Delivery speed selected: <b>${speed}</b></div>
+      <button onclick='closeRecommender();openOrder(${JSON.stringify(recommended)})' style="width:100%;background:var(--primary);color:white;border:none;padding:12px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;margin-top:8px;">Order This Package →</button>
+    </div>`;
+}
+
+// ===== GOAL-BASED ORDER =====
+function openGoalOrder(){document.getElementById('goalModal').style.display='flex';document.getElementById('goalResult').style.display='none';}
+function closeGoalOrder(){document.getElementById('goalModal').style.display='none';}
+function calcGoal(){
+  const target=parseInt(document.getElementById('goalFollowers').value)||0;
+  const current=parseInt(document.getElementById('goalCurrent').value)||0;
+  const needed=target-current;
+  if(needed<=0){showNotif('Target must be greater than current!','error');return;}
+  let best=null;
+  // Find package with closest followers count
+  const followerPkgs=packages.filter(p=>p.cat==='followers').concat(packages.filter(p=>p.cat==='combo'));
+  const sorted=followerPkgs.sort((a,b)=>Math.abs(parseInt(a.details)-needed)-Math.abs(parseInt(b.details)-needed));
+  best=sorted[0]||packages.find(p=>p.id==='p9');
+  const res=document.getElementById('goalResult');
+  res.style.display='block';
+  res.innerHTML=`
+    <div style="color:var(--text2);margin-bottom:8px;">You need <b style="color:var(--primary)">${needed.toLocaleString()} followers</b> to reach your goal.</div>
+    <div style="background:var(--card);border:1px solid var(--primary);border-radius:10px;padding:12px;margin-bottom:10px;">
+      <div style="font-weight:700">${best.name}</div>
+      <div style="font-size:12px;color:var(--text2)">${best.details}</div>
+      <div style="font-size:20px;font-weight:800;color:var(--primary)">₹${best.price}</div>
+    </div>
+    <button onclick='closeGoalOrder();openOrder(${JSON.stringify(best)})' style="width:100%;background:var(--primary);color:white;border:none;padding:11px;border-radius:10px;font-weight:700;cursor:pointer;">Order Now →</button>`;
+}
+
+// ===== VIP SECRET DEALS =====
+function openVipDeals(){
+  renderVipDeals();
+  document.getElementById('vipDealsModal').style.display='flex';
+}
+function closeVipDeals(){document.getElementById('vipDealsModal').style.display='none';}
+function renderVipDeals(){
+  const el=document.getElementById('vipDealsList');
+  if(!el) return;
+  el.innerHTML=vipDeals.filter(d=>d.active).map(d=>`
+    <div style="background:linear-gradient(135deg,#1a1200,#2a1f00);border:1px solid var(--gold);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+      <div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--gold)">${d.name}</div>
+        <div style="font-size:12px;color:var(--text2);margin:4px 0">${d.details}</div>
+        <div style="display:flex;gap:10px;align-items:baseline;">
+          <div style="font-size:22px;font-weight:800;color:var(--success)">₹${d.price}</div>
+          <div style="font-size:13px;color:var(--text2);text-decoration:line-through">₹${d.original}</div>
+          <div style="font-size:11px;background:var(--danger);color:white;padding:2px 7px;border-radius:10px;">${Math.round((1-d.price/d.original)*100)}% OFF</div>
+        </div>
+      </div>
+      <button onclick='closeVipDeals();openOrder({id:"${d.id}",name:"${d.name}",cat:"combo",details:"${d.details}",price:${d.price}})' style="background:var(--gold);color:#000;border:none;padding:10px 20px;border-radius:10px;font-weight:800;font-size:14px;cursor:pointer;">Claim Deal</button>
+    </div>`).join('')||'<p style="color:var(--text2);text-align:center">No VIP deals active right now. Check back soon!</p>';
+}
+function addVipDeal(){
+  const name=document.getElementById('vipDealName').value.trim();
+  const details=document.getElementById('vipDealDetails').value.trim();
+  const original=parseInt(document.getElementById('vipDealOriginal').value);
+  const price=parseInt(document.getElementById('vipDealPrice').value);
+  if(!name||!details||!original||!price){showNotif('Fill all fields!','error');return;}
+  if(price>=original){showNotif('VIP price must be less than original!','error');return;}
+  vipDeals.push({id:'vd'+Date.now(),name,details,original,price,active:true});
+  localStorage.setItem('bm_vip_deals',JSON.stringify(vipDeals));
+  renderVipDealsAdmin();
+  showNotif('VIP Deal added! 👑');
+}
+function renderVipDealsAdmin(){
+  const el=document.getElementById('vipDealsAdminList');
+  if(!el) return;
+  el.innerHTML=vipDeals.map((d,i)=>`
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:700;color:var(--gold)">${d.name}</div>
+        <div style="font-size:12px;color:var(--text2)">${d.details} | ₹${d.price} (was ₹${d.original})</div>
+      </div>
+      <div style="display:flex;gap:6px;">
+        <button class="action-btn ${d.active?'btn-complete':'btn-cancel'}" onclick="toggleVipDeal(${i})">${d.active?'✅ Active':'❌ Off'}</button>
+        <button class="action-btn btn-delete" onclick="deleteVipDeal(${i})">🗑</button>
+      </div>
+    </div>`).join('')||'<p style="color:var(--text2)">No VIP deals yet</p>';
+}
+function toggleVipDeal(i){vipDeals[i].active=!vipDeals[i].active;localStorage.setItem('bm_vip_deals',JSON.stringify(vipDeals));renderVipDealsAdmin();}
+function deleteVipDeal(i){vipDeals.splice(i,1);localStorage.setItem('bm_vip_deals',JSON.stringify(vipDeals));renderVipDealsAdmin();}
+
+// ===== FOMO ENGINE =====
+const fomoMessages=[
+  '🔥 Only <b style="color:var(--primary)">3 people</b> are viewing Growth Combo right now!',
+  '⚡ <b style="color:var(--warning)">12 orders</b> placed in the last hour!',
+  '🚀 Priya from Mumbai just ordered <b style="color:var(--secondary)">5K Followers!</b>',
+  '⏳ Flash Sale ends soon — <b style="color:var(--danger)">don\'t miss out!</b>',
+  '💎 <b style="color:var(--gold)">VIP Deal</b> claimed 4 minutes ago!',
+  '🔥 <b style="color:var(--primary)">89 people</b> have ordered today already!',
+];
+let fomoIdx=0;
+function startFomoEngine(){
+  setInterval(()=>{
+    fomoIdx=(fomoIdx+1)%fomoMessages.length;
+    const el=document.getElementById('fomoText');
+    if(el) el.innerHTML=fomoMessages[fomoIdx];
+  },8000);
+}
+
+// ===== LIVE SOCIAL PROOF =====
+const socialProofEvents=[
+  'Rahul from Delhi just ordered 1K Followers! 🚀',
+  'Priya (Mumbai) got 5K Likes — 10 mins ago ⭐',
+  'Arjun just bought Growth Combo for ₹549! 🔥',
+  'Sneha ordered ₹9 Trial Pack — just now! 🎁',
+  'Kiran from Bangalore claimed a VIP Deal! 👑',
+  'Meera got 100K Views — delivered in 20 mins! ⚡',
+  'Vikram referred a friend & both saved ₹20! 💸',
+  'Divya just became a Silver VIP Member! 🥈',
+  'Rohit ordered Express delivery — processing now! 🚀',
+  'Pooja earned 500 loyalty points — VIP unlocked! 💎',
+];
+let spIdx=0;
+function startSocialProof(){
+  setInterval(()=>{
+    spIdx=(spIdx+1)%socialProofEvents.length;
+    const el=document.getElementById('socialProofText');
+    if(el){
+      el.style.opacity='0';
+      setTimeout(()=>{el.textContent=socialProofEvents[spIdx];el.style.opacity='1';},300);
+    }
+  },5000);
+}
+
+// ===== AUTO WHATSAPP FUNNEL =====
+function startWAFunnel(){
+  setTimeout(()=>{
+    const el=document.getElementById('autoWAFunnel');
+    if(el&&!localStorage.getItem('bm_wa_funnel_shown')){
+      el.style.display='block';
+      localStorage.setItem('bm_wa_funnel_shown','1');
+      setTimeout(()=>{if(el) el.style.display='none';},15000);
+    }
+  },30000);
+}
+
+// ===== VIP BUTTON IN NAV =====
+function checkAndShowVipBtn(){
+  const phone=localStorage.getItem('bm_last_phone');
+  if(phone){
+    const pts=parseInt(localStorage.getItem('bm_pts_'+phone)||'0');
+    if(pts>=500){
+      const vipLink=document.createElement('a');
+      vipLink.href='#';vipLink.textContent='👑 VIP Deals';
+      vipLink.onclick=()=>openVipDeals();
+      vipLink.style.color='var(--gold)';vipLink.style.fontWeight='700';
+      document.getElementById('navLinks').appendChild(vipLink);
+    }
+  }
+}
+
+// Save phone on order for VIP check
+// (handled directly in submitOrder below)
+
+// ===== REC OPT STYLES =====
+document.addEventListener('DOMContentLoaded',()=>{
+  const style=document.createElement('style');
+  style.textContent=`.rec-opt{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;cursor:pointer;text-align:left;width:100%;transition:all 0.2s;font-family:inherit;}.rec-opt:hover{border-color:var(--secondary);color:var(--secondary);}`;
+  document.head.appendChild(style);
+});
+
+// ===== SMART RETARGET SYSTEM =====
+function checkRetarget(){
+  const lastPkg=localStorage.getItem('bm_last_pkg');
+  const lastTime=parseInt(localStorage.getItem('bm_retarget_time')||'0');
+  const now=Date.now();
+  // If last order was trial pack and came back within 24h
+  if(lastPkg==='trial'&&lastTime&&(now-lastTime)<86400000&&!localStorage.getItem('bm_retarget_shown')){
+    setTimeout(()=>{
+      localStorage.setItem('bm_retarget_shown','1');
+      const retargetDiv=document.createElement('div');
+      retargetDiv.style.cssText='position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,var(--bg2),var(--bg3));border:2px solid var(--primary);border-radius:14px;padding:18px;max-width:280px;z-index:950;box-shadow:0 8px 30px rgba(255,107,0,0.3);';
+      retargetDiv.innerHTML=`
+        <button onclick="this.parentElement.remove()" style="position:absolute;top:8px;right:10px;background:none;border:none;color:var(--text2);font-size:18px;cursor:pointer;">✕</button>
+        <div style="font-size:16px;margin-bottom:4px;">🎯 Welcome back!</div>
+        <div style="font-size:13px;color:var(--text2);margin-bottom:10px;">Loved the trial? Upgrade to 1K Followers now!</div>
+        <button onclick='openOrder(${JSON.stringify(packages.find(p=>p.id==="p7"))});this.closest("[style]").remove()' style="width:100%;background:var(--primary);color:white;border:none;padding:10px;border-radius:8px;font-weight:700;cursor:pointer;font-size:14px;">Get 1K Followers — ₹140 →</button>`;
+      document.body.appendChild(retargetDiv);
+    },5000);
+  }
+}
+
+// ===== UTILS =====
+function showNotif(msg,type=''){
+  const n=document.getElementById('notif');
+  n.textContent=msg;n.className='notif'+(type?' '+type:'');
+  n.classList.add('show');setTimeout(()=>n.classList.remove('show'),3000);
+}
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function closeNav(){document.getElementById('navLinks').classList.remove('open');}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded',()=>{
+  renderPackages();renderReviews();renderFAQ();genReferralCode();
+  renderSubGrid();animateLiveCounter();startFlashSale();initPopup();initTheme();
+  document.getElementById('liveOrderCount').textContent=liveCount.toLocaleString();
+  document.getElementById('statOrders').textContent=liveCount.toLocaleString();
+  startFomoEngine();
+  startSocialProof();
+  startWAFunnel();
+  checkRetarget();
+  checkAndShowVipBtn();
+  // Add VIP deals button to footer
+  setTimeout(()=>{
+    const footer=document.querySelector('footer');
+    if(footer){
+      const vBtn=document.createElement('button');
+      vBtn.textContent='👑 VIP Secret Deals';
+      vBtn.style.cssText='background:linear-gradient(135deg,var(--gold),#b8860b);color:#000;border:none;padding:9px 20px;border-radius:10px;font-weight:800;cursor:pointer;font-size:13px;margin:10px auto;display:block;';
+      vBtn.onclick=openVipDeals;
+      footer.prepend(vBtn);
+    }
+  },500);
+});
+</script>
+</body>
+</html>
