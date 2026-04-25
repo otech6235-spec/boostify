@@ -2571,18 +2571,33 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
   <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSy...",
-    authDomain: "boostify-b458c.firebaseapp.com",
-    projectId: "boostify-b458c",
-    storageBucket: "boostify-b458c.firebasestorage.app",
-    messagingSenderId: "447894526247",
-    appId: "1:447894526247:web:f2d6c5072cebb5409a7102"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyB6GJFEifbwsc16X5usixc7rcmM59bftf4",
+  authDomain: "boostify-b458c.firebaseapp.com",
+  projectId: "boostify-b458c",
+  storageBucket: "boostify-b458c.firebasestorage.app",
+  messagingSenderId: "447894526247",
+  appId: "1:447894526247:web:f2d6c5072cebb5409a7102"
+};
 
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 🔥 SAVE FUNCTION
+window.saveOrder = async function(name, phone, pkg, amount) {
+  await addDoc(collection(db, "orders"), {
+    name: name,
+    phone: phone,
+    package: pkg,
+    amount: amount,
+    status: "pending",
+    date: new Date()
+  });
+  alert("Order Saved ✅");
+};
   </script>
 </body>
 </html>
