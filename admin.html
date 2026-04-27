@@ -1,0 +1,217 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>Boostify Admin</title><style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+}
+.header{
+  padding:15px;
+  background:#151515;
+  display:flex;
+  justify-content:space-between;
+}
+.card{
+  background:#1a1a1a;
+  margin:15px;
+  padding:15px;
+  border-radius:10px;
+}
+input{
+  width:100%;
+  padding:8px;
+  margin:5px 0;
+  border:none;
+  border-radius:6px;
+}
+button{
+  padding:8px 12px;
+  background:#ff6b00;
+  border:none;
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+.table{width:100%}
+td,th{padding:8px;border-bottom:1px solid #222}
+.green{color:#00e676}
+.orange{color:#ff9800}
+</style></head><body><div class="header">
+<h2>🔥 Admin Panel</h2>
+<button onclick="logout()">Logout</button>
+</div><!-- LOGIN --><div class="card" id="loginBox">
+<h3>Admin Login</h3>
+<input id="adminPass" placeholder="Enter Password">
+<button onclick="login()">Login</button>
+</div><!-- PANEL --><div id="panel" style="display:none"><div class="card">
+<h3>Dashboard</h3>
+<p>Total Orders: <span id="totalOrders">0</span></p>
+<p>Total Revenue: ₹<span id="totalRevenue">0</span></p>
+<p>Total Commission: ₹<span id="totalCommission">0</span></p>
+<p>Total Profit: ₹<span id="totalProfit">0</span></p>
+</div><div class="card">
+<h3>Add Staff</h3>
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="password" placeholder="Password">
+<button onclick="addStaff()">Add Staff</button>
+</div><div class="card">
+<h3>Staff List</h3>
+<table id="staffTable"></table>
+</div><div class="card">
+<h3>Orders</h3>
+<table id="orderTable"></table>
+</div><div class="card">
+<h3>Payout Requests</h3>
+<table id="payoutTable"></table>
+</div></div><script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+// 🔥 ADD YOUR CONFIG
+const firebaseConfig = {
+ apiKey:"YOUR_KEY",
+ authDomain:"YOUR_DOMAIN",
+ projectId:"YOUR_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// ================= LOGIN =================
+function login(){
+ if(adminPass.value==="1234"){
+  localStorage.setItem("admin","true");
+  start();
+ }else{
+  alert("Wrong password");
+ }
+}
+
+function logout(){
+ localStorage.removeItem("admin");
+ location.reload();
+}
+
+function start(){
+ loginBox.style.display="none";
+ panel.style.display="block";
+ loadStaff();
+ loadOrders();
+ loadPayouts();
+}
+
+if(localStorage.getItem("admin")) start();
+
+// ================= STAFF =================
+async function addStaff(){
+ let id="S"+Math.floor(100+Math.random()*900);
+
+ await addDoc(collection(db,"staff"),{
+  staffId:id,
+  name:name.value,
+  phone:phone.value,
+  password:password.value,
+  earnings:0,
+  orders:0
+ });
+}
+
+function loadStaff(){
+ onSnapshot(collection(db,"staff"),snap=>{
+  let html="<tr><th>ID</th><th>Name</th><th>Phone</th><th>Earnings</th><th>Action</th></tr>";
+
+  snap.forEach(docSnap=>{
+    let s=docSnap.data();
+    html+=`
+    <tr>
+      <td>${s.staffId}</td>
+      <td>${s.name}</td>
+      <td>${s.phone}</td>
+      <td class="green">₹${s.earnings}</td>
+      <td><button onclick="deleteStaff('${docSnap.id}')">Delete</button></td>
+    </tr>`;
+  });
+
+  staffTable.innerHTML=html;
+ });
+}
+
+window.deleteStaff = async(id)=>{
+ await deleteDoc(doc(db,"staff",id));
+}
+
+// ================= ORDERS =================
+function loadOrders(){
+ onSnapshot(collection(db,"orders"),snap=>{
+  let html="<tr><th>ID</th><th>Type</th><th>Staff</th><th>Amount</th><th>Commission</th><th>Profit</th></tr>";
+
+  let totalOrders=0,totalRevenue=0,totalCommission=0,totalProfit=0;
+
+  snap.forEach(docSnap=>{
+    let o=docSnap.data();
+
+    let commission=Math.floor(o.amount*0.23);
+    let cost=o.cost||0;
+    let profit=o.amount-commission-cost;
+
+    totalOrders++;
+    totalRevenue+=o.amount;
+    totalCommission+=commission;
+    totalProfit+=profit;
+
+    html+=`
+    <tr>
+      <td>${docSnap.id}</td>
+      <td>${o.type}</td>
+      <td>${o.staffId||"-"}</td>
+      <td>₹${o.amount}</td>
+      <td class="orange">₹${commission}</td>
+      <td class="green">₹${profit}</td>
+    </tr>`;
+  });
+
+  orderTable.innerHTML=html;
+
+  totalOrdersEl.innerText=totalOrders;
+  totalRevenueEl.innerText=totalRevenue;
+  totalCommissionEl.innerText=totalCommission;
+  totalProfitEl.innerText=totalProfit;
+ });
+}
+
+// ================= PAYOUT =================
+function loadPayouts(){
+ onSnapshot(collection(db,"payouts"),snap=>{
+  let html="<tr><th>Staff</th><th>Amount</th><th>Status</th><th>Action</th></tr>";
+
+  snap.forEach(docSnap=>{
+    let p=docSnap.data();
+
+    html+=`
+    <tr>
+      <td>${p.staffId}</td>
+      <td>₹${p.amount}</td>
+      <td>${p.status}</td>
+      <td>
+        <button onclick="approve('${docSnap.id}')">Approve</button>
+      </td>
+    </tr>`;
+  });
+
+  payoutTable.innerHTML=html;
+ });
+}
+
+window.approve = async(id)=>{
+ await updateDoc(doc(db,"payouts",id),{
+  status:"paid"
+ });
+}
+
+</script></body>
+</html>
